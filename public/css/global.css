@@ -1,0 +1,70 @@
+html,body{
+    height: 100%;
+    overflow-x: hidden;
+}
+hr{
+    color: #11a511;
+}
+
+
+.box{
+    box-shadow:-10px 5px 30px rgb(0 0 0 / 50%);
+    border-radius:15px;
+    padding: 30px;
+}
+
+.switch{
+    width: 72px;
+    height: 33px;
+    position: relative;
+    display: block !important;
+    background-color: #1dc81d;
+    border-radius: 25px;
+    box-shadow: inset -10px 5px 30px rgb(0 0 0 / 25%);
+}
+.checkbox{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggle-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 70px;
+}
+.toggle-thumb::before {
+    content: "";
+    width: 32px;
+    height: 30px;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    border-radius: 50%;
+    background-color: #128e12;
+    transition: .4s all ease;
+}
+.checkbox:checked + .toggle-thumb:before {
+    transform: translateX(-34px);
+}
+
+
+/* /////////////////////////
+Dark Theme
+//////////////////////// */
+.body-dark{
+    background-color: rgb(24, 29, 33);
+}
+/* /////////////////////////
+Light Theme
+//////////////////////// */
+.body-light{
+    background-color: #efeee9;
+}

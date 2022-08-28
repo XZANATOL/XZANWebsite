@@ -1,0 +1,62 @@
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+a, a:hover{
+	text-decoration: none;
+}
+hr{
+	height: 2px !important;
+	opacity: 0.8;
+}
+
+
+.theme-switcher{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.row{
+	width: 100%;
+}
+.box{
+	text-align: center;
+	color: #11a511;
+	transition-property: transform;
+	transition: 0.3s;
+}
+.box:hover, .box:active{
+	transform: scale(1.05);
+}
+.box > section{
+	width: 100%;
+}
+.box > svg{
+	height: 70px;
+	margin-bottom: 15px;
+}
+
+
+/* /////////////////////////
+Dark Theme
+//////////////////////// */
+.body-dark > div > section > a > .box{
+    background-color:#4a4a4a26;
+}
+.body-dark > div > section > a > .box > svg{
+	fill: rgb(255 255 255 / 90%);
+}
+
+
+/* /////////////////////////
+Light Theme
+//////////////////////// */
+.body-light > div > section > a > .box{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.body-light > div > section > a > .box > svg{
+	fill: #606060;
+}

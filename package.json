@@ -1,0 +1,25 @@
+{
+  "name": "xzanwebsite",
+  "version": "1.0.0",
+  "description": "Personal Website/Blog",
+  "main": "server.js",
+  "scripts": {
+    "run": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XZANATOL/XZANWebsite.git"
+  },
+  "author": "XZANATOL",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/XZANATOL/XZANWebsite/issues"
+  },
+  "homepage": "https://github.com/XZANATOL/XZANWebsite#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
