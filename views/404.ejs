@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/imgs/fav_icon.png">
+	<title>XZANATOL Website</title>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/home.css">
+
+	<script src="/js/bootstrap.bundle.js"></script>
+	<script src="/js/global.js"></script>
+</head>
+
+<body class="body-dark">
+	<div class="theme-switcher">
+		<%- include("./navbar.ejs") %>
+	</div>
+
+	<div class="row gx-5" style="justify-content: center;">
+		<section class="col-12 col-md-6">
+			<div class="box">
+				<svg xmlns="http://www.w3.org/2000/svg" style="fill: rgba(230, 27, 27, 0.9);" class="bi bi-exclamation-diamond-fill" viewBox="0 0 16 16">
+					<path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+				</svg>
+				<hr>
+				<section class="row" style="align-items: center; color: rgba(230, 27, 27, 0.9);">
+					<div class="col-6 col-md-5" style="text-align: center;">
+						<h1>404</h1>
+					</div>
+
+					<div class="col-6 col-md-7" style="text-align: justify; text-align-last: center;">
+						We couldn't find what you're looking for! :\
+					</div>
+				</section>
+				<br>
+				<h5>Return to <a href="/" style="color: inherit; text-decoration: underline;">Homepage</a>?</h5>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
