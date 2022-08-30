@@ -19,6 +19,7 @@ hr{
 	top: 20px;
 	right: 20px;
 }
+
 .row{
 	width: 100%;
 }
@@ -48,6 +49,7 @@ Dark Theme
 }
 .body-dark > div > section > a > .box > svg{
 	fill: rgb(255 255 255 / 90%);
+	transition: 0.3s;
 }
 
 
@@ -59,4 +61,5 @@ Light Theme
 }
 .body-light > div > section > a > .box > svg{
 	fill: #606060;
+	transition: 0.3s;
 }

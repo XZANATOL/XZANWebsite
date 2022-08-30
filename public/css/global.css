@@ -1,6 +1,7 @@
 html,body{
     height: 100%;
     overflow-x: hidden;
+    transition: 0.3s;
 }
 hr{
     color: #11a511;
@@ -13,12 +14,15 @@ hr{
     padding: 30px;
 }
 
+/* /////////////////////////
+Theme Switcher
+//////////////////////// */
 .switch{
     width: 72px;
     height: 33px;
     position: relative;
     display: block !important;
-    background-color: #1dc81d;
+    background-color: #49654E;
     border-radius: 25px;
     box-shadow: inset -10px 5px 30px rgb(0 0 0 / 25%);
 }
@@ -27,7 +31,7 @@ hr{
     width: 0;
     height: 0;
 }
-.toggle-thumb {
+.toggle-thumb{
     position: absolute;
     top: 0;
     left: 0;
@@ -54,6 +58,9 @@ hr{
 .checkbox:checked + .toggle-thumb:before {
     transform: translateX(-34px);
 }
+/* /////////////////////////
+Theme Switcher
+//////////////////////// */
 
 
 /* /////////////////////////

@@ -1,7 +1,7 @@
 module.exports = function(server){
 
 	server.get("/portfolio", (request, response) => {
-		response.render("home/index.ejs")
+		return response.render("portfolio/index.ejs")
 	})
 
 }
