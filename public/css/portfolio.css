@@ -1,8 +1,6 @@
 body{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	color: white;
 }
 a, a:hover{
@@ -20,6 +18,18 @@ header{
 	justify-content: space-between !important;
 	padding: 0 10px 0 20px;
 	transition: 0.3s;
+}
+main{
+	margin-top: 85px;
+}
+button{
+	background: transparent;
+	border-radius: 15px;
+	border-color: #11a511;
+	color: #11a511;
+	padding: 5px;
+	margin: 5px;
+	transition: 0.25s;
 }
 
 .navbar-collapse{
@@ -40,11 +50,21 @@ header{
 	color: white;
 }
 
+.pp-card > div{
+	text-align: center;
+}
+.pp-pic{
+	border-radius: 50%;
+}
+
 /* /////////////////////////
 Dark Theme
 //////////////////////// */
 .body-dark > header{
 	background-color: #212529;
+}
+.body-dark > main > .box{
+	background-color: #4a4a4a26;
 }
 .body-dark > header > a,
 .body-dark > header > div > ul > li > a,
@@ -52,6 +72,19 @@ Dark Theme
 .body-dark > header > div > ul > li > a:focus,
 .body-dark > header > div > ul > li > a:visited{
 	color: inherit;
+}
+.body-dark > main > section > div > div > h1,
+.body-dark > main > section > div > div > h2{
+	color: white;
+	transition: 0.3s;
+}
+.body-dark > main > section > div > div > p{
+	color: rgba(255, 255, 255, 0.75) !important;
+	transition: 0.3s;
+}
+.body-dark > main > section > div > div > button:hover,
+.body-dark > main > section > div > div > a > button:hover{
+	background-color: #901010;
 }
 
 
@@ -61,10 +94,23 @@ Light Theme
 .body-light > header{
 	background-color: #49654E;
 }
+.body-light > main > .box{
+	background-color: rgba(255, 255, 255, 0.15);
+}
 .body-light > header > a,
 .body-light > header > div > ul > li > a,
 .body-light > header > div > ul > li > a:hover,
 .body-light > header > div > ul > li > a:focus,
 .body-light > header > div > ul > li > a:visited{
 	color: inherit;
+}
+.body-light > main > section > div > div > h1,
+.body-light > main > section > div > div > h2,
+.body-light > main > section > div > div > p{
+	color: black;
+	transition: 0.3s;
+}
+.body-light > main > section > div > div > button:hover,
+.body-light > main > section > div > div > a > button:hover{
+	background-color: #c0cfb2;
 }
