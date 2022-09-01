@@ -126,6 +126,48 @@
                 </div>
             </div>
         </section>
+
+        <br><br><br>
+
+        <section class="row" id="Resume">
+            <h2 style="text-align: center;">Resume _</h2>
+            <p style="text-align: justify; text-align-last: center;">
+                <%= resume %>
+            </p>
+
+            <div class="col-xs-12 col-md-6">
+                <hr>
+                <h3>Work Experience</h3>
+                <div class="box box-fullHieght">
+                    <% workExperience.forEach( (wE) => { %>
+                    <div class="box-xp">
+                        <h5><%= wE.title %></h5>
+                        <p>
+                            <span>
+                                <a href="<%= wE.companyLink %>" target="_blank"><%= wE.company %></a>
+                            </span>
+                            <br>
+                            <span><%= wE.period %></span>
+                        </p>
+
+                        <ul>
+                            <% wE.bulletPoint.forEach( (bp) => { %>
+                            <li><%- bp %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                    <% }) %>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <hr>
+                <h3>Education</h3>
+                <div class="box box-fullHieght">
+                    
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>

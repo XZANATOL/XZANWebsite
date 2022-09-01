@@ -6,6 +6,8 @@ module.exports = function(server, db){
 			"headline": data.props.headline,
 			"greetings": data.props.greetings,
 			"discord_handle": data.props.discord_handle,
+			"resume": data.props.resume,
+			"workExperience": data.props.workExperience
 		}
 		return response.render("portfolio/index.ejs", context)
 	})
