@@ -28,7 +28,9 @@ button{
 	transition: 0.25s;
 }
 main > section > div > div > div > p > span > a,
-main > section > div > div > div > ul > li > a{
+main > section > div > div > div > ul > li > a,
+main > section > div > div > div > div > p > span > a,
+main > section > div > div > div > div > ul > li > a{
 	text-decoration: underline;
 	color: #11a511;
 }
@@ -37,11 +39,20 @@ main > section > div > div > div > p > span > a:focus,
 main > section > div > div > div > p > span > a:visited,
 main > section > div > div > div > ul > li > a:hover,
 main > section > div > div > div > ul > li > a:focus,
-main > section > div > div > div > ul > li > a:visited{
+main > section > div > div > div > ul > li > a:visited,
+main > section > div > div > div > div > p > span > a:hover,
+main > section > div > div > div > div > p > span > a:focus,
+main > section > div > div > div > div > p > span > a:visited,
+main > section > div > div > div > div > ul > li > a:hover,
+main > section > div > div > div > div > ul > li > a:focus,
+main > section > div > div > div > div > ul > li > a:visited{
 	text-decoration: underline;
 	color: #11a511;
 }
 
+.fixed-top{
+	position: sticky;
+}
 .navbar-collapse{
 	flex-grow: unset;
 }
@@ -81,6 +92,36 @@ main > section > div > div > div > ul > li > a:visited{
 	border-left: 2px solid #11a511;
 	margin-bottom: 40px;
 }
+.button-raw{
+	border:  none;
+	outline: none;
+	box-shadow: none;
+	color: inherit;
+	float: right;
+	margin-top: -30px;
+	text-decoration: none;
+	color: #11a511;
+}
+.button-raw:hover{
+	background: none !important;
+}
+.popup{
+	display: none;
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	top: 85px;
+	z-index: 1;
+	width: 80%;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.popup::-webkit-scrollbar{
+  display: none;
+}
+.show{
+	display: block;
+}
 
 
 /* /////////////////////////
@@ -103,7 +144,8 @@ Dark Theme
 .body-dark > main > section > div > div > h2,
 .body-dark > main > section > h2,
 .body-dark > main > section > div > h3,
-.body-dark > main > section > div > div > div > h5{
+.body-dark > main > section > div > div > div > h5,
+.body-dark > main > section > div > div > div > div > h5,{
 	color: white;
 	transition: 0.3s;
 }
@@ -111,13 +153,18 @@ Dark Theme
 .body-dark > main > section > p,
 .body-dark > main > section > div > hr,
 .body-dark > main > section > div > div > div > p > span,
-.body-dark > main > section > div > div > div > ul > li{
+.body-dark > main > section > div > div > div > ul > li,
+.body-dark > main > section > div > div > div > div > p > span,
+.body-dark > main > section > div > div > div > div > ul > li{
 	color: rgba(255, 255, 255, 0.75) !important;
 	transition: 0.3s;
 }
 .body-dark > main > section > div > div > button:hover,
 .body-dark > main > section > div > div > a > button:hover{
 	background-color: #901010;
+}
+.body-dark > main > section > div > div > .popup{
+	background-color: rgb(33, 37, 41);
 }
 
 
@@ -146,11 +193,17 @@ Light Theme
 .body-light > main > section > div > h3,
 .body-light > main > section > div > div > div > h5,
 .body-light > main > section > div > div > div > p > span,
-.body-light > main > section > div > div > div > ul > li{
+.body-light > main > section > div > div > div > ul > li,
+.body-light > main > section > div > div > div > div > h5,
+.body-light > main > section > div > div > div > div > p > span,
+.body-light > main > section > div > div > div > div > ul > li{
 	color: black;
 	transition: 0.3s;
 }
 .body-light > main > section > div > div > button:hover,
 .body-light > main > section > div > div > a > button:hover{
 	background-color: #c0cfb2;
+}
+.body-light > main > section > div > div > div{
+	background-color: rgb(239, 238, 233);
 }
