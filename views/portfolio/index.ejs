@@ -56,7 +56,7 @@
         </div>
 	</header>
 
-    <main class="container">
+    <main class="container" id="">
         <section id="Portfolio-Card" class="box">
             <div class="row pp-card">
                 <div class="col-xs-12 col-lg-4 col-xl-3">
@@ -127,9 +127,9 @@
             </div>
         </section>
 
-        <br><br><br>
+        <br id="Resume"><br><br>
 
-        <section class="row" id="Resume">
+        <section class="row">
             <h2 style="text-align: center;">Resume _</h2>
             <p style="text-align: justify; text-align-last: center;">
                 <%= resume %>
@@ -156,6 +156,7 @@
                             <% }) %>
                         </ul>
                     </div>
+                    <br>
                     <% } %>
 
                     <button onclick="switch_popup('wE_id')" class="button-raw">Show more..!</button>
@@ -179,6 +180,7 @@
                                 <% }) %>
                             </ul>
                         </div>
+                        <br>
                         <% } %>
                     </div>
                 </div>
@@ -188,7 +190,131 @@
                 <hr>
                 <h3>Education</h3>
                 <div class="box box-fullHieght">
-                    
+                    <div class="box-xp">
+                        <h5>Alexandria higher Institute of Engineering and Technology</h5>
+                        <p>
+                            <span>BA, Electronics & Communications Engineering</span>
+                            <br>
+                            <span>Sep, 2019 - Sep, 2024</span>
+                        </p>
+                    </div>
+
+                    <% for (let eE=0; eE < 2; eE++){ %>
+                    <div class="box-xp">
+                        <h5><%= educationExperience[eE].place %></h5>
+                        <p>
+                            <span><%= educationExperience[eE].type %></span>
+                        </p>
+
+                        <ul>
+                            <% educationExperience[eE].bulletPoint.forEach( (bp) => { %>
+                            <li><%- bp %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                    <br>
+                    <% } %>
+
+                    <button onclick="switch_popup('eE_id')" class="button-raw">Show more..!</button>
+
+                    <div class="container box popup" id="eE_id">
+                        <button onclick="switch_popup('eE_id')" class="button-raw">X</button>
+                        <% for (let eE=0; eE < educationExperience.length; eE++){ %>
+                        <div class="box-xp">
+                            <h5><%= educationExperience[eE].place %></h5>
+                            <p>
+                                <span><%= educationExperience[eE].type %></span>
+                            </p>
+
+                            <ul>
+                                <% educationExperience[eE].bulletPoint.forEach( (bp) => { %>
+                                <li><%- bp %></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                        <br>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <hr>
+                <h3>Volunteer</h3>
+                <div class="box box-fullHieght">
+                    <% for (let v=0; v < volunteer.length; v++){ %>
+                    <div class="box-xp">
+                        <h5><%= volunteer[v].position %></h5>
+                        <p>
+                            <span>
+                                <a href="<%= volunteer[v].placeLink %>" target="_blank"><%= volunteer[v].place %></a>
+                            </span>
+                            <br>
+                            <span><%= volunteer[v].period %></span>
+                        </p>
+
+                        <ul>
+                            <% volunteer[v].bulletPoint.forEach( (bp) => { %>
+                            <li><%- bp %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <hr>
+                <h3>Tech Stack</h3>
+                <div class="box box-fullHieght">
+                    <div class="row">
+                        <div class="col-6">
+                            <h6 class="techStack-record-h">Languages</h6>
+                        </div>
+                        <div class="col-6 techStack-record-span">
+                            <span><%= techStack.Languages %></span>
+                        </div>
+                        <hr class="techStack-hr">
+
+                        <div class="col-6">
+                            <h6 class="techStack-record-h">Frameworks</h6>
+                        </div>
+                        <div class="col-6 techStack-record-span">
+                            <span><%= techStack.Frameworks %></span>
+                        </div>
+                        <hr class="techStack-hr">
+
+                        <div class="col-6">
+                            <h6 class="techStack-record-h">Databases</h6>
+                        </div>
+                        <div class="col-6 techStack-record-span">
+                            <span><%= techStack.Databases %></span>
+                        </div>
+                        <hr class="techStack-hr">
+
+                        <div class="col-6">
+                            <h6 class="techStack-record-h">Tools</h6>
+                        </div>
+                        <div class="col-6 techStack-record-span">
+                            <span><%= techStack.Tools %></span>
+                        </div>
+                        <hr class="techStack-hr">
+
+                        <div class="col-6">
+                            <h6 class="techStack-record-h">Platforms</h6>
+                        </div>
+                        <div class="col-6 techStack-record-span">
+                            <span><%= techStack.Platforms %></span>
+                        </div>
+                        <hr class="techStack-hr">
+
+                        <div class="col-6">
+                            <h6 class="techStack-record-h">Others</h6>
+                        </div>
+                        <div class="col-6 techStack-record-span">
+                            <span><%= techStack.Others %></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
