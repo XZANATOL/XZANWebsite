@@ -30,20 +30,14 @@
         <!-- End Mobile Navbar Button -->
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                <li class="nav-item active" id="sec1">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                <li class="nav-item" id="sec1">
+                    <a class="nav-link" aria-current="page" href="#Card">Card</a>
                 </li>
-                <li class="nav-item" id="sec2">
+                <li class="nav-item active" id="sec2">
                   <a class="nav-link" href="#Resume">Resume</a>
                 </li>
                 <li class="nav-item" id="sec3">
                   <a class="nav-link" href="#Projects">Projects</a>
-                </li>
-                <li class="nav-item" id="sec4">
-                  <a class="nav-link" href="#Blog">Blog</a>
-                </li>
-                <li class="nav-item" id="sec5">
-                  <a class="nav-link" href="#Contact">Contact</a>
                 </li>
                 <li class="d-sm-block d-md-none">
                 	<%- include("../navbar.ejs") %>
@@ -56,7 +50,7 @@
         </div>
 	</header>
 
-    <main class="container" id="">
+    <main class="container" id="Card">
         <section id="Portfolio-Card" class="box">
             <div class="row pp-card">
                 <div class="col-xs-12 col-lg-4 col-xl-3">
@@ -317,6 +311,21 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <br id="Projects"><br><br>
+
+        <section>
+            <h2 style="text-align: center;">Projects _</h2>
+            <p style="text-align: justify; text-align-last: center;">
+                Listed projects can be found organized on <a href="https://github.com/XZANATOL/ProjectSpace" target="_blank">GitHub</a>.
+            </p>
+        </section>
+
+        <br id="Projects"><br><br>
+
+        <section style="text-align: center;">
+            <p>Made with NodeJS & Updated on Sep 2022.</p>
         </section>
     </main>
 </body>
