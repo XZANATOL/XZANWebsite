@@ -1,11 +1,22 @@
 html{
 	height: 100%;
 }
+*::-webkit-scrollbar{
+  	display: none;
+}
+*{
+	-ms-overflow-style: none;
+	scrollbar-width: none
+}
 body{
 	display: flex;
 	flex-direction: column;
 	color: white;
 	height: 100%;
+	scrollbar-width: auto;
+}
+body::-webkit-scrollbar{
+	display: block;
 }
 a, a:hover{
 	text-decoration: none;
@@ -116,7 +127,9 @@ main > section > div > div > div > div > ul > li > a:visited{
 	right: 10%;
 	top: 85px;
 	z-index: 1;
+	height: 500px;
 	width: 80%;
+	overflow-y: scroll;
 }
 .show{
 	display: block;
@@ -125,8 +138,7 @@ main > section > div > div > div > div > ul > li > a:visited{
 	margin-left: 10px;
 }
 .techStack-record-span{
-	text-align: justify;
-	text-align-last: center;
+	text-align: center;
 }
 .techStack-hr{
 	height: 2px;
