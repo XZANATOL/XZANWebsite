@@ -12,7 +12,7 @@
 
 	<script src="/js/bootstrap.bundle.js"></script>
 	<script src="/js/global.js"></script>
-    <script src="/js/portfolio.js"></script>
+    <script src="/js/portfolio.js" defer></script>
 </head>
 
 <body class="body-dark">
@@ -30,14 +30,14 @@
         <!-- End Mobile Navbar Button -->
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                <li class="nav-item" id="sec1">
-                    <a class="nav-link" aria-current="page" href="#Card">Card</a>
+                <li class="nav-item active" id="sec1">
+                    <a class="nav-link" aria-current="page" href="#sec1-sec">Card</a>
                 </li>
-                <li class="nav-item active" id="sec2">
-                  <a class="nav-link" href="#Resume">Resume</a>
+                <li class="nav-item" id="sec2">
+                  <a class="nav-link" href="#sec2-br">Resume</a>
                 </li>
                 <li class="nav-item" id="sec3">
-                  <a class="nav-link" href="#Projects">Projects</a>
+                  <a class="nav-link" href="#sec3-br">Projects</a>
                 </li>
                 <li class="d-sm-block d-md-none">
                 	<%- include("../navbar.ejs") %>
@@ -50,8 +50,8 @@
         </div>
 	</header>
 
-    <main class="container" id="Card">
-        <section id="Portfolio-Card" class="box">
+    <main class="container" id="sec1-sec">
+        <section class="box">
             <div class="row pp-card">
                 <div class="col-xs-12 col-lg-4 col-xl-3">
                     <img class="img-fluid pp-pic" src="/imgs/portfolio/pp.jpg" alt="Profile Picture" title="Profile Picture" />
@@ -121,9 +121,9 @@
             </div>
         </section>
 
-        <br id="Resume"><br><br>
+        <br id="sec2-br"><br><br>
 
-        <section class="row">
+        <section class="row" id="sec2-sec">
             <h2 style="text-align: center;">Resume _</h2>
             <p style="text-align: justify; text-align-last: center;">
                 <%= resume %>
@@ -313,16 +313,16 @@
             </div>
         </section>
 
-        <br id="Projects"><br><br>
+        <br id="sec3-br"><br><br>
 
-        <section>
+        <section id="sec3-sec">
             <h2 style="text-align: center;">Projects _</h2>
             <p style="text-align: justify; text-align-last: center;">
                 Listed projects can be found organized on <a href="https://github.com/XZANATOL/ProjectSpace" target="_blank">GitHub</a>.
             </p>
         </section>
 
-        <br id="Projects"><br><br>
+        <br><br><br>
 
         <section style="text-align: center;">
             <p>Made with NodeJS & Updated on Sep 2022.</p>

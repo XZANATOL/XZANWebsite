@@ -88,6 +88,7 @@ main > section > p > a:visited{
 }
 .active{
 	color: white;
+	transition: 0.3s;
 }
 
 .pp-card > div{
@@ -131,7 +132,7 @@ main > section > p > a:visited{
 	right: 10%;
 	top: 85px;
 	z-index: 1;
-	height: 500px;
+	height: 80%;
 	width: 80%;
 	overflow-y: scroll;
 }
