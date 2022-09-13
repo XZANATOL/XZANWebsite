@@ -16,6 +16,7 @@ server.use(express.static("public"))
 require("./routes/home")(server)
 require("./routes/redirects")(server, db)
 require("./routes/portfolio")(server, db)
+require("./routes/blog")(server)
 
 
 server.listen(port, () => {

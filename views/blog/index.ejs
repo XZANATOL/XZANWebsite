@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/imgs/fav_icon.png">
+	<title>Blog - XZANSite</title>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/blog.css">
+
+	<script src="/js/bootstrap.bundle.js"></script>
+	<script src="/js/global.js"></script>
+</head>
+
+<body class="body-dark">
+	<header class="container">
+		<div class="box">
+			<h1>Blog - Home</h1>
+			<span>Total posts <%= postCount %>
+			<div class="theme">
+				<%- include("../navbar.ejs") %>
+			</div>
+		</div>
+	</header>
+
+	<br><br>
+
+	<main class="container">
+		<div class="row gy-5">
+			<section class="col-12 col-md-6 post-container">
+				<h2>Latest _</h2>
+			</section>
+
+			<section class="col-12 col-md-6 post-container">
+				<h2>Categories _</h2>
+			</section>
+		</div>
+	</main>
+</body>
+</html>
