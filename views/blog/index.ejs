@@ -35,6 +35,13 @@
 
 			<section class="col-12 col-md-6 post-container">
 				<h2>Categories _</h2>
+				<div class="row list">
+					<% for(cat of categories){ %>
+					<div class="col-3 list-record">
+						<h4><a href="/blog/<%= cat %>"><%= cat %></a></h4>
+					</div>
+					<% } %>
+				</div>
 			</section>
 		</div>
 	</main>

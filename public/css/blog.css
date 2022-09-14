@@ -6,7 +6,16 @@ header{
 	text-align: center;
 	position: relative;
 }
-
+main > div > section > div > div > h4 > a{
+	text-decoration: underline;
+	color: #11a511;
+}
+main > div > section > div > div > h4 > a:hover,
+main > div > section > div > div > h4 > a:focus,
+main > div > section > div > div > h4 > a:visited{
+	text-decoration: underline;
+	color: #11a511;
+}
 
 .theme{
 	width: 100%;
@@ -16,6 +25,13 @@ header{
 .post-container{
 	border-right: 1px solid #11a511;
 	border-left: 1px solid #11a511;
+}
+.list{
+	padding-top: 18px;
+	padding-left: 18px;
+}
+.list-record{
+	margin-bottom: 15px;
 }
 
 
