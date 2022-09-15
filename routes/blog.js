@@ -11,6 +11,7 @@ module.exports = function(server){
 		return response.render("blog/index.ejs", context)
 	})
 
+
 	server.get("/blog/:cat", (request, response) => {
 		let dir;
 		try{
@@ -19,11 +20,11 @@ module.exports = function(server){
 			dir = []
 		}
 		const context = {
-			"postCount": 5,
-			"categories": dir
+			"cat": request.params.cat,
+			"topics": dir
 		}
 		// View will be changed with the next commit
-		return response.render("blog/index.ejs", context)
+		return response.render("blog/index_cat.ejs", context)
 	})
 
 }

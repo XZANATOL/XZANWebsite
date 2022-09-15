@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/imgs/fav_icon.png">
+	<title>Blog - <%= cat %> - XZANSite</title>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/blog_cat.css">
+
+	<script src="/js/bootstrap.bundle.js"></script>
+	<script src="/js/global.js"></script>
+</head>
+
+<body class="body-dark">
+	<header class="container">
+		<div class="box">
+			<h1>Blog - <%= cat %></h1>
+			<div class="theme">
+				<%- include("../navbar.ejs") %>
+
+				<a href="/blog">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#11a511" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+					 	<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<br><br><br>
+
+	<main class="container">
+		<div class="row gy-5 list">
+			<% for(topic of topics){ %>
+			<div class="col-4 list-record">
+				<h4><a href="/blog/<%= cat %>/<%= topic %>"><%= topic %></a></h4>
+			</div>
+			<% } %>
+		</div>
+	</main>
+</body>
+</html>
