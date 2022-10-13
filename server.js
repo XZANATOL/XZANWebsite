@@ -27,8 +27,6 @@ require("./routes/home")(server)
 require("./routes/redirects")(server, db)
 require("./routes/portfolio")(server, db)
 require("./routes/blog")(server)
-require("./routes/admin")(server, db)
-
 
 server.listen(port, () => {
 	console.log(`Listening on port ${port}`)
