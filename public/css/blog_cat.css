@@ -6,15 +6,23 @@ header{
 	text-align: center;
 	position: relative;
 }
+a,
 main > div > div  > h4 > a{
 	text-decoration: underline;
 	color: #11a511;
 }
+a:hover,
+a:focus,
+a:visited,
 main > div > div  > h4 > a:hover,
 main > div > div  > h4 > a:focus,
 main > div > div  > h4 > a:visited{
 	text-decoration: underline;
 	color: #11a511;
+}
+h3{
+	text-decoration: underline;
+	padding-bottom: 8px;
 }
 
 
@@ -45,12 +53,19 @@ Dark Theme
 	color: white;
 	transition: 0.3s;
 }
-
+.body-dark > main > *:not(a){
+	color: #efefef;
+	transition: 0.3s;
+}
 
 /* /////////////////////////
 Light Theme
 //////////////////////// */
 .body-light > header > div >  h1{
 	color: black !important;
+	transition: 0.3s;
+}
+.body-light > main > *:not(a){
+	color: black;
 	transition: 0.3s;
 }

@@ -35,8 +35,8 @@
 	<main class="container">
 		<div class="row gy-5 list">
 			<% for(post of posts){ %>
-			<div class="col-4 list-record">
-				<h4><a href="/blog/<%= cat %>/<%= topic %>/<%= post %>"><%= post %></a></h4>
+			<div class="col-6 list-record">
+				<h4><a href="/blog/<%= cat %>/<%= topic %>/<%= post.replace(/\.[^/.]+$/, '') %>"><%= post.replace(/\.[^/.]+$/, "") %></a></h4>
 			</div>
 			<% } %>
 		</div>

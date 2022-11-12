@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/imgs/fav_icon.png">
+	<title><%= post %></title>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/blog_cat.css">
+
+	<script src="/js/bootstrap.bundle.js"></script>
+	<script src="/js/global.js"></script>
+</head>
+<body class="body-dark">
+	<header class="container">
+		<div class="box">
+			<h1><%= post %></h1>
+			<div class="theme">
+				<%- include("../../../theme_switch.ejs") %>
+
+				<a href="./">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#11a511" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+					 	<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<br><br><br>
+
+	<main class="container" style="text-align: justify;">
+		<span style="display: block; text-align: center;">Added: 12-11-2022 / Updated: 12-11-2022</span>
+
+		<h3>Introduction:</h3>
+		<p>
+			&emsp;I've always been fascinated by electronics and the theory behind transmitting and receiving data. How they are translated between simply electricity of 0.5 & 1.5 volts (low & high), processed, and printed to text & textures on screen. These different types of energies that are converted from one form to another to deliver one piece of information at a time in an organized manner without overlapping.
+		</p>
+		<p>
+			&emsp;This summer I’ve taken a step towards simplifying this complexity by acquiring one of the books in the Electronics and Communications major. The approach of reading a book was preferred as I was working full time as an IT Specialist. So it was kinda hard to test on equipment or watch a full Youtube playlist. In addition, a book is one of the best resources to get familiar with the market as it easily lists the information more neatly where you can skip or rewind paragraphs while keeping track of where you are. <strong>Teach Yourself Electricity and Electronics</strong> <a href="https://www.amazon.com/Teach-Yourself-Electricity-Electronics-Gibilisco/dp/0071377301" target="_blank">Third Edition</a> by <strong>Stan Gibilisco</strong> was the book of choice. I also came across <strong>The Art of Electronics</strong> but the <a href="https://www.amazon.com/Art-Electronics-Paul-Horowitz/dp/0521809266" target="_blank">book</a> seemed very juicy to finish compared to the available timespan which was around 3-4 months.
+		</p>
+		<p>
+			&emsp;The book consists of 4 major sections: Direct Current, Alternating Current, Basic Electronics, and Advanced Electronics & Related Technology. Each chapter and section has its own multiple choice quiz, in addition to a final examination at the end of the book. It also doesn’t require any prerequisites as the book covers the most basic theories and terminologies, such as: electrons, protons, atomic numbers, …etc, and gradually levels up the complexity to the advanced real world electronics.
+		</p>
+
+		<br>
+		<h3>Section 1 - Direct Current:</h3>
+		<p>
+			&emsp;As stated, the section begins with the basic physics principles and theories of an atom and electrical units. Then moves on with defining basic electrical components like resistors, cells & batteries, measuring devices.
+		</p>
+		<p>
+			&emsp;Coming to the advanced part of the section. The book discusses DC circuit analysis, in addition to some basic DC circuits some of which are used in electrical measuring devices. Finally, It introduces magnetism, dipoles and monopoles, which are the opening talks for the next section.
+		</p>
+		<p>
+			&emsp;What I liked about that section is that not only it introduced the theory behind the basic electrical components, but also the types and shapes which can be found in the market, why they have certain fixed values, and the use cases for each of them.
+		</p>
+
+		<br>
+		<h3>Section 2 - Alternating Current:</h3>
+		<p>
+			&emsp;Second section covers the principles of alternating current and its components, which included: inductance, capacitance, impedance, phase, RLC circuit analysis, resonance, and power. Ending up with transformers and impedance matching.
+		</p>
+		<p>
+			&emsp;This part dove deep into more than the basic principles of AC. It included sections on Audio frequency transformers, Isolation Transformers, Balanced and Unbalanced loads, Impedance-Transfer Ratio, Radio-Frequency Transformers and Transmission Line types.
+		</p>
+
+		<br>
+		<h3>Section 3 - Basic Electronics:</h3>
+		<p>
+			&emsp;The section goes into semiconductors, diodes, power supplies, transistors, amplifiers, oscillators and so on. Two topics I really didn't expect to find here were data transmission and data reception, which occupy over 40 pages.
+		</p>
+		<p>
+			&emsp;I got lucky to meet these topics in my engineering curriculum this term and finishing the book before the term began helped me to clearly understand many topics such as modulation. It got me even more interested in Embedded Systems that I’m taking steps to understand microprocessors and low level logics now.
+		</p>
+
+		<br>
+		<h3>Section 4 - Advanced Electronics and Related Technology:</h3>
+		<p>
+			&emsp;The final section discussed briefly many of today’s world electronics applications. The section covered Acoustics, Audio and High Fidelity followed by Wireless and Personal Communication Systems then Computers and the Internet. Real good stuff to give one a good grasp of the basics, and some curiosity to dive into Embedded Systems.
+		</p>
+
+		<br>
+		<h3>Final Thoughts:</h3>
+		<p>
+			&emsp;Reading fundamentals books like this one gave me a huge boost in understanding my engineering curriculum and doing in depth researches as part of assigned reports from the professors.
+		</p>
+		<p>
+			&emsp;It is professionally written in an easy to read and follow style, covers many of the modern market electronics, and gives a general overview about behaviors of different circuits.
+		</p>
+	</main>
+
+</body>
+</html>

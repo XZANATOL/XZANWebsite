@@ -43,9 +43,12 @@ module.exports = function(server){
 
 
 	server.get("/blog/:cat/:topic/:post", (request, response) => {
-		const check = fs.existsSync(`${__dirname}/../views/blog-articles/${request.params.cat}/${request.params.topic}/${request.params.post}`)
+		const check = fs.existsSync(`${__dirname}/../views/blog-articles/${request.params.cat}/${request.params.topic}/${request.params.post}.ejs`)
 		if(check){
-			return response.render(`blog-articles/${request.params.cat}/${request.params.topic}/${request.params.post}`)
+			return response.render(`blog-articles/${request.params.cat}/${request.params.topic}/${request.params.post}.ejs`,
+			{
+				"post": request.params.post
+			})
 		}
 		return response.render("404.ejs")
 	})
