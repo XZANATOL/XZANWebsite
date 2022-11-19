@@ -9,14 +9,19 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/global.css">
 	<link rel="stylesheet" href="/css/blog_cat.css">
+	<style type="text/css">
+		main :not(h3){
+			text-align: justify;
+		}
+	</style>
 
 	<script src="/js/bootstrap.bundle.js"></script>
 	<script src="/js/global.js"></script>
 </head>
 <body class="body-dark">
 	<header class="container">
-		<div class="box">
-			<h1><%= post %></h1>
+		<div class="box" style="word-break: break-all;">
+			<h1><%= post.split("_").join(" ") %></h1>
 			<div class="theme">
 				<%- include("../../../theme_switch.ejs") %>
 
@@ -29,14 +34,14 @@
 		</div>
 	</header>
 
-	<br><br><br>
+	<br>
 
-	<main class="container" style="text-align: justify;">
+	<main class="container">
 		<span style="display: block; text-align: center;">Added: 12-11-2022 / Updated: 12-11-2022</span>
 
 		<h3>Introduction:</h3>
 		<p>
-			&emsp;I've always been fascinated by electronics and the theory behind transmitting and receiving data. How they are translated between simply electricity of 0.5 & 1.5 volts (low & high), processed, and printed to text & textures on screen. These different types of energies that are converted from one form to another to deliver one piece of information at a time in an organized manner without overlapping.
+			&emsp;I've always been fascinated by electronics and the theory behind transmitting and receiving data. How they are translated between simple electricity of 0.5 & 1.5 volts (low & high), processed, and printed to text & textures on screen. These different types of energies that are converted from one form to another to deliver one piece of information at a time in an organized manner without overlapping.
 		</p>
 		<p>
 			&emsp;This summer I’ve taken a step towards simplifying this complexity by acquiring one of the books in the Electronics and Communications major. The approach of reading a book was preferred as I was working full time as an IT Specialist. So it was kinda hard to test on equipment or watch a full Youtube playlist. In addition, a book is one of the best resources to get familiar with the market as it easily lists the information more neatly where you can skip or rewind paragraphs while keeping track of where you are. <strong>Teach Yourself Electricity and Electronics</strong> <a href="https://www.amazon.com/Teach-Yourself-Electricity-Electronics-Gibilisco/dp/0071377301" target="_blank">Third Edition</a> by <strong>Stan Gibilisco</strong> was the book of choice. I also came across <strong>The Art of Electronics</strong> but the <a href="https://www.amazon.com/Art-Electronics-Paul-Horowitz/dp/0521809266" target="_blank">book</a> seemed very juicy to finish compared to the available timespan which was around 3-4 months.

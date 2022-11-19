@@ -43,6 +43,7 @@ h3{
 .list-record{
 	margin-bottom: 10px;
 	text-align: center;
+	word-break: break-all;
 }
 
 
