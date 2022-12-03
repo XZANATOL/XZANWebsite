@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/imgs/fav_icon.png">
+	<title><%= post %></title>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/blog_cat.css">
+	<style type="text/css">
+		main :not(h3){
+			text-align: justify;
+		}
+		code {
+			display: block;
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+
+	<script src="/js/bootstrap.bundle.js"></script>
+	<script src="/js/global.js"></script>
+</head>
+<body class="body-dark">
+	<header class="container">
+		<div class="box" style="word-break: break-all;">
+			<h1><%= post.split("_").join(" ") %></h1>
+			<div class="theme">
+				<%- include("../../../theme_switch.ejs") %>
+
+				<a href="./">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#11a511" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+					 	<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<br>
+
+	<main class="container">
+		<span style="display: block; text-align: center;">Added: 3-12-2022 / Updated: 3-12-2022</span>
+
+		<br>
+
+		<p>
+			Comptetions, Events, and Hackathons are some of my targets to hit for 2023 goals. And I already began gathering & filtering info about the different activities that take place globally and locally in Egypt, and see what I can-want to take part in. I've been following some newsletters lately and <a href="https://www.thebetter.dev/" target="_blank">The Better Dev</a> is one of the best! Recommend you to follow it.
+		</p>
+
+		<p>
+			From it I came across <a href="https://adventofcode.com/" target="_blank">Advent of Code</a> which in summary:
+		</p>
+
+		<code>
+			Since 2015, Programmers have been enjoying this to help them practice their logical thinking and problem solving skills.<br><br>
+
+			In December, Each day a new challenge is revealed. You are given a story with clues to the answer that you need to code with, and this continues for 25 days.<br><br>
+
+			You can choose any programming of your choice as it's not opinionated whatsoever.<br><br>
+
+			You can do this solo or do some pair programming.
+		</code>
+
+		<p>
+			<br>
+			Sounds fun! Practice coding and problem solving without the hard vibe of a challenge or deadlines which is suitable with the heavy curriculum I have during this semester in college. Reading the about page:
+		</p>
+
+		<code style="text-align: center;"><br>The puzzles unlock at midnight EST/UTC-5.</code>
+		
+		<p>
+			<br>
+			Well, This is not the best thing for someone living in UTC+2 with 7Hrs difference, but the puzzles are openned all day so this should not be a problem. Only thing is that I can't compete in the global leaderboard.
+		</p>
+
+		<p>
+			I'm writing this after solving the 3rd puzzle on time. And I've got to say, the puzzles are fun and is not that hard till now, but It's challenging in a way that let's you be creative with optimzing your solution to get the answer and can be used with practicing principles such as clean code, and simple OOP which is one of my goals of participation.
+		</p>
+
+		<br>
+
+		<p>
+			<strong>What's the rewards of participating?</strong><br>
+			Well, Advent of Code is a free to use, community based event created by <a href="http://was.tl/" target="_blank">Eric Wastl</a> who created <a href="http://vanilla-js.com/" target="_blank">Vanilla JS</a>. The event is like a mini-hackathon to practice coding and get known to a wider community or compete with your friends.
+		</p>
+
+		<br>
+
+		<p style="margin-bottom: 0;">
+			<strong>Why should you participate?</strong><br>
+			Well, each one of us has different goals, but you'll find something in common such as:
+			<ul>
+				<li>Practicing a new programming language and want to get comfortable with.</li>
+				<li>Practicing some principles such as clean code, or OOP.</li>
+				<li>Competing in the global leaderboard, or a private (local) one.</li>
+			</ul>
+		</p>
+		
+		<br>
+
+		<p style="margin-bottom: 0;">
+			<strong>Why am I participating?</strong><br>
+			<ul>
+				<li>Practicing clean code to be specific.</li>
+				<li>The event is not widely known in Egypt, yet!</li>
+				<li>Trying to raise awarness that there are communities who target problem solving for fun, not only just for career progression as this causes burnouts for some after participating in large scale contests such as ICPC or doing a question bulk in CodeForces.</li>
+				<li>To get known to a wider community of developers.</li>
+				<li>Finally, I just enjoy coding. :p</li>
+			</ul>
+		</p>
+		
+		<br>
+
+		<p>
+			I'm going to update this DevLog by the end of this month, where I'm going to add a screenshot of my AoC'2022 calendar shape. Also, it will be fun to know anyone (not just from Egypt) who is participating too! I can mention him/er here and add a screenshot of calendar too if he/she wants! :p<br>
+			You can reach me from <a href="https://xzansite.cyclic.app/portfolio">here</a>.
+		</p>
+	</main>
+</body>
