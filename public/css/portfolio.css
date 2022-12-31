@@ -46,7 +46,9 @@ main > section > div > div > div > p > span > a,
 main > section > div > div > div > ul > li > a,
 main > section > div > div > div > div > p > span > a,
 main > section > div > div > div > div > ul > li > a,
-main > section > p > a{
+main > section > p > a,
+main > section > div > div > p > a,
+main > section > div > div > ul > li > a{
 	text-decoration: underline;
 	color: #11a511;
 }
@@ -64,7 +66,13 @@ main > section > div > div > div > div > ul > li > a:focus,
 main > section > div > div > div > div > ul > li > a:visited,
 main > section > p > a:hover,
 main > section > p > a:focus,
-main > section > p > a:visited{
+main > section > p > a:visited,
+main > section > div > div > ul > li > a:hover,
+main > section > div > div > ul > li > a:focus,
+main > section > div > div > ul > li > a:visited
+main > section > div > div > p > a:hover,
+main > section > div > div > p > a:focus,
+main > section > div > div > p > a:visited{
 	text-decoration: underline;
 	color: #11a511;
 }
@@ -148,6 +156,17 @@ main > section > p > a:visited{
 	margin: 8px 0;
 	opacity: 1;
 }
+
+.GH-ul, .GH-ul > li{
+	margin-top: 8px;
+}
+.GH-wrapper{
+	margin-top: 8px;
+}
+.GHSL{
+	width: 100%;
+	border-radius: 8px;
+}
 /* /////////////////////////
 Dark Theme
 //////////////////////// */
@@ -181,7 +200,9 @@ Dark Theme
 .body-dark > main > section > div > div > div > ul > li,
 .body-dark > main > section > div > div > div > div > p > span,
 .body-dark > main > section > div > div > div > div > ul > li,
-.body-dark > main > section > div > div > div > div > span{
+.body-dark > main > section > div > div > div > div > span,
+.body-dark > main > section > div > div > ul > li,
+.body-dark > main > section > div > div > p{
 	color: rgba(255, 255, 255, 0.75) !important;
 	transition: 0.3s;
 }
@@ -225,7 +246,9 @@ Light Theme
 .body-light > main > section > div > div > div > div > p > span,
 .body-light > main > section > div > div > div > div > ul > li,
 .body-light > main > section > div > div > div > div > h6,
-.body-light > main > section > div > div > div > div > span{
+.body-light > main > section > div > div > div > div > span,
+.body-light > main > section > div > div > ul > li,
+.body-light > main > section > div > div > p{
 	color: black;
 	transition: 0.3s;
 }
