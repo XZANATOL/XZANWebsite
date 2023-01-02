@@ -1,7 +1,7 @@
 html,body{
-    height: 100%;
     overflow-x: hidden;
     transition: 0.3s;
+    height: 100%;
 }
 hr{
     color: #11a511;

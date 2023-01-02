@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/imgs/fav_icon.png">
+	<title>Brag Document - XZANSite</title>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/brag_doc.css">
+
+	<script src="/js/bootstrap.bundle.js"></script>
+	<script src="/js/global.js"></script>
+	<script src="/js/brag_doc.js" defer></script>
+</head>
+
+<body class="body-dark">
+	<header class="container">
+		<div class="box">
+			<h1>Brag Document</h1>
+			<div class="mini-header">
+				<form class="query" method="post" onchange="bragGrabber(this)">
+					<select name="year" onchange="monthUpdater(this)">
+						<option value="">Select Year</option>
+						<% brags.forEach((brag) => { %>
+							<option value="<%= brag %>"><%= brag %></option>
+						<% }) %>
+						
+					</select>
+
+					<select name="month" id="month">
+						<option value="">Select Month</option>
+					</select>
+				</form>
+				<div class="theme d-none d-md-flex">
+					<%- include("../theme_switch.ejs") %>
+				</div>
+			</div>
+			<div class="theme d-sm-flex d-md-none">
+				<%- include("../theme_switch.ejs") %>
+			</div>
+		</div>
+	</header>
+
+	<br><br>
+
+	<main class="container">
+		<div class="col-12 loader-wrapper d-none"><div class="loader"></div></div>
+		<div class="row gy-4" id="docs">
+		</div>
+	</main>
+</body>
+</html>
