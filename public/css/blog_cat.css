@@ -6,17 +6,7 @@ header{
 	text-align: center;
 	position: relative;
 }
-a,
-main > div > div  > h4 > a{
-	text-decoration: underline;
-	color: #11a511;
-}
-a:hover,
-a:focus,
-a:visited,
-main > div > div  > h4 > a:hover,
-main > div > div  > h4 > a:focus,
-main > div > div  > h4 > a:visited{
+a:is(*, :hover, :focus, :visited){
 	text-decoration: underline;
 	color: #11a511;
 }

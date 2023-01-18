@@ -6,13 +6,7 @@ header{
 	text-align: center;
 	position: relative;
 }
-main > div > section > div > div > h4 > a{
-	text-decoration: underline;
-	color: #11a511;
-}
-main > div > section > div > div > h4 > a:hover,
-main > div > section > div > div > h4 > a:focus,
-main > div > section > div > div > h4 > a:visited{
+main > div > section > div > div > h4 > a:is(*, :hover, :focus, :visited){
 	text-decoration: underline;
 	color: #11a511;
 }
@@ -22,10 +16,6 @@ main > div > section > div > div > h4 > a:visited{
 	width: 100%;
 	display: flex;
 	flex-direction: row-reverse;
-}
-.post-container{
-	border-right: 1px solid #11a511;
-	border-left: 1px solid #11a511;
 }
 .list{
 	padding-top: 18px;
