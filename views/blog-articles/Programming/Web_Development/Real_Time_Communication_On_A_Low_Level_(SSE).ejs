@@ -60,7 +60,7 @@
 	<br>
 
 	<main class="container">
-		<span style="display: block; text-align: center;">Added: 08-02-2023 / Updated: 08-02-2023</span>
+		<span style="display: block; text-align: center;">Added: 08-02-2023 / Updated: 10-02-2023</span>
 
 		<br>
 
@@ -223,6 +223,20 @@
 
 		<p>
 			JS provides a direct method to decode this, using <span style="font-weight: bold;">TextDecoder().decode(buffer)</span> and as you see in the last command. the variable Z is fulfilled giving us the response.
+		</p>
+
+		<h3>Why Uint8?</h3>
+
+		<p>
+			We have integers and unsigned integers, we also have different ranges like 16 & 32bits. Why Uint8 specifically?
+		</p>
+
+		<p>
+			Come to think about it, when streaming data for RTCs, SSE usually transfers English characters like what we have with PocketBase. English characters are more efficient expressed with <a href="https://en.wikipedia.org/wiki/Extended_ASCII" target="_blank">Extended ASCII</a> that ranges between 0-255 or 00000000 to 11111111 in bits. Using other sizes like 16 or 32 will be inefficient as there will be unused bits that will always be set to 0. For representing "A" in uint16: 0000 0000 0100 0001. This can be only usefull if you're developing messages that uses other kinds of characters unsupported with ASCII like emotes and chiness characters.
+		</p>
+
+		<p>
+			For the signed and unsigned.. Have you ever heard of a negative number representing a character? No! well here is the answer.. :p
 		</p>
 
 		<h3>Conclusion</h3>
