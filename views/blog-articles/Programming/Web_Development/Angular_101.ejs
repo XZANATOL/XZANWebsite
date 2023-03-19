@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/imgs/fav_icon.png">
+	<title><%= post %></title>
+
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="/css/blog_cat.css">
+	<style type="text/css">
+		h4{
+			text-decoration: underline;
+		}
+		main :not(h3){
+			text-align: justify;
+		}
+		td, th {
+		  border: 1px solid #efefef;
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		tr:nth-child(even) {
+		  background-color: #151515;
+		}
+	</style>
+
+	<script src="/js/bootstrap.bundle.js"></script>
+	<script src="/js/global.js"></script>
+</head>
+<body class="body-dark">
+	<header class="container">
+		<div class="box" style="word-break: break-all;">
+			<h1><%= post.split("_").join(" ") %></h1>
+			<div class="theme">
+				<%- include("../../../theme_switch.ejs") %>
+
+				<a href="./">
+					<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#11a511" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+					 	<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<br>
+
+	<main class="container">
+		<span style="display: block; text-align: center;">Added: 19-03-2023 / Updated: 19-03-2023</span>
+
+		<br>
+
+		<h3>Introduction</h3>
+
+		<p>
+			In the modern development, web applications have multiple architectures that provide solutions for balancing performance between data communication between a server & a client, and the user experience. Angular is one technology that thrives into this solution. It helps teams to start small and supports them as the application grows to expand it in a maintainable manner.
+		</p>
+
+		<p>
+			<a href="https://angular.io/" target="_blank">Angular</a> is an open-source, Google maintained, JavaScript framework written in TypeScript. Its primary purpose is to develop single-page applications, but can serve to develop multi-page applications too, thanks to its routing flexibility. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. we'll break down it's elements as we go along this blog.
+		</p>
+
+		<p>
+			I'm going to write about some basic concepts that you should know about before beginning with your first Angular app. It should help you get a general overview about what you're editing, navigating, and the dev-slang used to describe these concepts.
+		</p>
+
+		<h3>Why I Chose Angular?</h3>
+
+		<p>
+			Starting Feb-2023, I wanted to learn new concepts that provides a steep learning curve, and I haven't got into frontend frameworks yet. Comparing technology trends like React, Svelte, Angular, ..and so on. I saw many going into React for its battery extensions, and multiple CLI tools that shortcut many concepts like the <a href="https://create-react-app.dev/" target="_blank">create-react-app</a> tool. I wanted to know what happens under the hood of these tools, and learn something that doesn't have multiple Youtube tutorials. So Angular was my way to go.
+		</p>
+
+		<p>
+			I spent a complete month reading through the documentations, and learning about <a href="https://rxjs.dev/" target="_blank">RxJS</a>, before I was able to develop comfortably inside the framework. I built 2 projects:
+		</p>
+		<ol>
+			<li>The tutorial mentioned in the docs with some customized changes. <a href="https://github.com/XZANATOL/ProjectSpace/tree/master/Practices/2023_Angular-Docs-Tutorial" target="_blank">Project Link</a></li>
+			<li>A side project which is an application organizer platform for better tracking job applications when job hunting. <a href="https://github.com/XZANATOL/ProjectSpace/tree/master/Practices/2023_JobScout" target="_blank">Project Link</a></li>
+		</ol>
+
+		<h3>ng - The Angular CLI</h3>
+
+		<p>
+			Angular files has some static lines of codes that defines a certain concept in the frameworks structure, It's good to learn about them at first but later on, it'll be quite boring having to copy/paste the same lines across multiple files. That's why Angular CLI exists, It helps you writing these lines without having to memorize or debug them everytime you create a new file for some purpose inside the framework.
+		</p>
+
+		<p>
+			Angular CLI is aliased with `ng`. The tool helps you initialize, develop, scaffold, and maintain Angular applications directly from your command shell. You can learn more by reading till the <span style="font-style: italic;">Basic workflow</span> section in this docs <a href="https://angular.io/cli" target="_blank">page</a>.
+		</p>
+
+		<h3>Project File Structure</h3>
+
+		<p>
+			I bet you'll get overwhelmed with the status of your newly initiated project if you ran `ng new &lt;my-project&gt;`. Well, that's a common reaction when someone learns about a new framework, but it can be break down.
+		</p>
+
+		<p>
+			You're workspace should have a similar skeleton of this:
+			<table>
+				<thead>
+					<th>File</th>
+					<th>Description</th>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>.editorconfig</td>
+						<td>Configuration for code editors.</td>
+					</tr>
+					<tr>
+						<td>.gitignore</td>
+						<td>Specifies intentionally untracked files that Git should ignore.</td>
+					</tr>
+					<tr>
+						<td>README.md</td>
+						<td>Introductory documentation for the root application.</td>
+					</tr>
+					<tr>
+						<td>angular.json</td>
+						<td>CLI configuration defaults for all projects in the workspace, including configuration options for build, serve, and test tools that the CLI uses, such as Karma, and Protractor.</td>
+					</tr>
+					<tr>
+						<td>package.json</td>
+						<td>Configures npm package dependencies that are available to all projects in the workspace.</td>
+					</tr>
+					<tr>
+						<td>package-lock.json</td>
+						<td>Provides version information for all packages installed into 'node_modules' by the npm client.</td>
+					</tr>
+					<tr>
+						<td>src/</td>
+						<td>Source files for the root-level application project. (your application)</td>
+					</tr>
+					<tr>
+						<td>node_modules/</td>
+						<td>Provides npm packages to the entire workspace.</td>
+					</tr>
+					<tr>
+						<td>tsconfig.json</td>
+						<td>The base TypeScript configuration for projects in the workspace.</td>
+					</tr>
+				</tbody>
+			</table>
+		</p>
+
+		<p>
+			Diving into the `src/` folder, you'll find the following
+		</p>
+
+		<table>
+			<thead>
+				<th>File</th>
+				<th>Description</th>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>app/</td>
+					<td>Contains the component files in which your application logic and data are defined. (we'll talk about that)</td>
+				</tr>
+				<tr>
+					<td>assets/</td>
+					<td>Contains image and other asset files to be copied as-is when you build your application.</td>
+				</tr>
+				<tr>
+					<td>favicon.ico</td>
+					<td>An icon to use for this application in the bookmark bar.</td>
+				</tr>
+				<tr>
+					<td>index.html</td>
+					<td>The main HTML page that is served when someone visits your site.</td>
+				</tr>
+				<tr>
+					<td>main.ts</td>
+					<td>The main entry point for your application.</td>
+				</tr>
+				<tr>
+					<td>styles.css</td>
+					<td>Lists CSS files that supply styles for a project. The extension reflects the style preprocessor you have configured for the project.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br>
+
+		<p>
+			Indepth details can be found on this docs <a href="https://angular.io/guide/file-structure" target="_blank">page</a>.
+		</p>
+
+		<h3>How Angular Works: Developer Terms</h3>
+
+		<p>
+			You have two main components that manage logic in a structured manner, disregarding scientific terminologies. First part is responsible for obtaining data from an API, let the data be an authentication session, a query to obtain a list of data, whatever it be. This is called a 'Service', and it often uses <a href="https://angular.io/guide/rx-library" target="_blank">RxJS</a> to handle asyncrohnous requests and real time connections via subscriptions.
+		</p>
+
+		<p>
+			The second part is what a user sees, the webpage. A 'component' defines the User Interface that the user interacts with. This  is the major part of Angular where a component is furthur configured with a route, integerations with the used service(s), and in some cases it'll be bundled inside a module which can be used in some multiple cases like lazy-loading. Let's break this more.
+		</p>
+
+		<h4>Component</h4>
+
+		<p>
+			As mentioned above, A 'component' defines the User Interface that the user interacts with. New components can be generated using `ng generate component &lt;name&gt;`. It mainly consists of 4 files:
+		</p>
+
+		<table>
+			<thead>
+				<th>File</th>
+				<th>Description</th>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>app.component.ts</td>
+					<td>Defines the logic for the application's root component, named AppComponent.</td>
+				</tr>
+				<tr>
+					<td>app.component.html</td>
+					<td>Defines the HTML template associated with AppComponent.</td>
+				</tr>
+				<tr>
+					<td>app.component.css</td>
+					<td>Defines the base CSS stylesheet for AppComponent.</td>
+				</tr>
+				<tr>
+					<td>app.component.spec.ts</td>
+					<td>Defines a unit test for AppComponent.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br>
+
+		<p>
+			You can thing of a component like a smart HTML `div` tag. It contains its own CSS, routing configurations, and data communication with the framework. A component can be nested, allowing it to render sub-components.
+		</p>
+
+		<p>
+			Everything considering generating a new component to explaining the lines of codes in each file can be found on this docs <a href="https://angular.io/guide/component-overview" target="_blank">page</a>.
+		</p>
+
+		<h4>Module</h4>
+
+		<p>
+			A file that provides a bootstrap mechanism to manage components. Any Angular project must have one of these in the root directory `src/app` this is called a `Root Module`. The file maintains declared components, any external libraries to be used inside the app, like the built-in Angular http client, any defined routes (you can also find routes in a separate routing file beside the module file). Under any module lies one or more components.
+		</p>
+
+		<p>
+			It can also be furthur extended to be required by other modules which is called a 'Feature Module'. These exists for the purpose of organizing code. More about that can be found on this docs <a href="https://angular.io/guide/feature-modules#how-to-make-a-feature-module" target="_blank">page</a>.
+		</p>
+
+		<h4>Routing</h4>
+
+		<p>
+			A set of paths that describes what component should be rendered when an URL is provided. This can be found either in a Module file, or a seperate routing file. It provides configuration like guards or checks to be made before rendering a component. This comes in handy for authentication, and validating URL params. More about this can be found on this docs <a href="https://angular.io/guide/routing-overview" target="_blank">page</a>.
+		</p>
+
+		<h4>Data Binding</h4>
+
+		<p>
+			This is the method used by Angular to communicate data between a compnent template (HTML file) and the framework logic. These in other terms are variables defined in a component .ts file and used in its template via template directives.
+		</p>
+
+		<h4>Directives</h4>
+
+		<p>
+			Angular syntax that is used inside templates to render dynamic data. This can be loops `*ngFor`, conditional `*ngIf`, or variables `{{var-name}}`. More about Template Syntax, Data-Bindings, and Directives can be found on this docs <a href="https://angular.io/guide/architecture-components#template-syntax" target="_blank">page</a>.
+		</p>
+
+		<h4>Dependency Injection</h4>
+
+		<p>
+			This can be the one advanced term that may take time to wrap your head around. This is usually used between services to include other services by providing these services as paramters, thus improving code re-usability and testing. This docs <a href="https://angular.io/guide/architecture-services" target="_blank">page</a> should explain it in more in-depth details.
+		</p>
+
+		<p>
+			The idea involves the term 'Inversion of Control' where you build a function (let's call it func_A) that takes a parameter as another function (let's call it func_B). In the body of func_A, func_B is called where the control is then moved to func_B doing its bussiness logic, then return the control to func_A after it finishes.
+		</p>
+
+		<h3>Last Notes</h3>
+
+		<p>
+			Lots of terms intoduced and more to explore if you decided to dive deeper into the documentation. For my case, I tried the project based learning by following along the tutorial listed on their documentation <a href="https://angular.io/tutorial/tour-of-heroes" target="_blank">here</a>, and it gave great results, the tutorial worked it's way with trying different methods to build an application. It helps you build code first to understand the fundamentals and slowly refactor it to include best practices.
+		</p>
+
+		<p>
+			This should be everything to mention to give you a good boost. Things will become more clear when you begin writing code yourself, and good luck with learning it. :)
+		</p>
+	</main>
+</body>
