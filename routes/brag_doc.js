@@ -1,6 +1,6 @@
 const fs = require("fs")
 
-module.exports = function(server, db){
+module.exports = (server, db) => {
 
 	server.get("/brag_doc", async (request, response) => {
 		let temp = await db.collection("brag").list()
@@ -30,14 +30,14 @@ module.exports = function(server, db){
 		if (brag == null){
 			return response.send(err)
 		}
-		let months = Object.keys(brag.props)
-		let monthsFiltered = []
-		months.forEach( (month) => {
-			if (month != "updated" && month != "created"){
-				monthsFiltered.push(month)
-			}
+		let months = Object.keys(brag.props).filter((month) => { return (month != "created" && month != "updated")})
+		
+		const monthsReverseSorted = ['Dec', 'Nov', 'Oct', 'Sep', 'Aug', 'Jul', 'Jun', 'May', 'Apr', 'Mar', 'Feb', 'Jan']
+		months.sort((a, b) => {
+			return monthsReverseSorted.indexOf(a) - monthsReverseSorted.indexOf(b)
 		})
-		return response.send(JSON.stringify(monthsFiltered))
+
+		return response.send(JSON.stringify(months))
 	})
 
 
