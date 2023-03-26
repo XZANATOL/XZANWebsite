@@ -1,0 +1,102 @@
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+a:is(*, :hover, :visited, :focus){
+	text-decoration: none;
+}
+hr{
+	height: 2px !important;
+	opacity: 0.8;
+}
+header{
+	text-align: center;
+	margin-top: 4em;
+	width: 90%;
+	margin-bottom: 20px;
+}
+main{
+	width: 100%;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;  /* Firefox */
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+
+
+.theme-switcher{
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 1;
+}
+
+
+.box{
+	text-align: center;
+	transition-property: transform;
+	transition: 0.3s;
+	padding: 20px;
+}
+.box:hover, .box:active{
+	transform: scale(1.03);
+	cursor: pointer;
+}
+.box > section{
+	width: 100%;
+}
+.box > img{
+	width: 90%;
+	border-radius: 6px;
+	margin-bottom: 3px;
+}
+.box > p{
+	text-align: left;
+	font-size: small;
+}
+
+
+.modal-header{
+	border-bottom: 1px solid #11a511;
+}
+.modal-dialog{
+	max-width: 70%;
+}
+.modal-body > img {
+	width: 100%;
+	border-radius: 6px;
+}
+
+
+/* /////////////////////////
+Dark Theme
+//////////////////////// */
+.body-dark > header > p,
+.body-dark > main > section > .box > h4,
+.body-dark > main > section > .box > p{
+	color: #efefef;
+	transition: 0.3s;
+}
+
+.body-dark > main > section > div > div > .modal-content{
+	background-color: #181D21;
+	border-radius: 8px;
+}
+
+/* /////////////////////////
+Light Theme
+//////////////////////// */
+.body-light > header > p,
+.body-light > main > section > .box > h4,
+.body-light > main > section > .box > p{
+	color: black;
+	transition: 0.3s;
+}
+
+.body-light > main > section > div > div > .modal-content{
+	background-color: #EFEEE9;
+	border-radius: 8px;
+}
