@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "run": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "mdconv": "cd md_to_ejs_converter && python template_generator.py"
   },
   "repository": {
     "type": "git",

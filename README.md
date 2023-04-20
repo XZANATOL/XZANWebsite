@@ -5,7 +5,7 @@ A [NodeJS refactor](https://xzansite.cyclic.app/) of the old Django portfolio we
 ## New Features
 
 <ul>
-	<li>A grouping homepage for both portfolio and blog.</li>
+	<li>A grouping homepage for different apps</li>
 	<li>A redirect API for internal & external links.</li>
 	<li>A dedicated API for adding & deleting dynamic data used by the server side.</li>
 </ul>
