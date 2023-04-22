@@ -1,4 +1,5 @@
 from datetime import datetime
+from base64 import b64encode
 from jinjax import Catalog
 from sys import argv
 from os import path
@@ -73,6 +74,13 @@ def tokens_converter(file_data) -> dict:
 		code = match[1].replace("\n", "<br>").replace("<br>", "", 1)
 		code_lines.append(code)
 		file_data = file_data.replace(match[0], f"""<div class="code-block">{code}</div><br>""")
+
+	# Imgs Conversion
+	matches = re.findall(r"(\!\[\[([^\[\]]+)\]\])", file_data)
+	for match in matches:
+		with open(match[1], "rb") as img_file:
+			encoded_img = b64encode(img_file.read()).decode()
+		file_data = file_data.replace(match[0], f"<img src=\"data:image/png;base64,{encoded_img}\"><br><br>")
 
 	# Paragraphs Conversion
 	p_tokens = file_data.split("\n")

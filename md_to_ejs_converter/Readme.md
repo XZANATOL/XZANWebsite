@@ -8,7 +8,7 @@ After writing a new blog (using [Obsidian](https://obsidian.md/)), I usually spe
 
 - Template Generator
 	* [ ] Add support to text between ` `` `.
-	* [ ] Add support to convert images into base64.
+	* [x] Add support to convert images into base64.
 	* [ ] Add support to tables.
 
 - Template Jinja
