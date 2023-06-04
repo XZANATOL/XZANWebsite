@@ -57,6 +57,9 @@ main::-webkit-scrollbar {
 	text-align: left;
 	font-size: small;
 }
+.box > h4{
+	word-break: break-all;
+}
 
 
 .modal-header{
