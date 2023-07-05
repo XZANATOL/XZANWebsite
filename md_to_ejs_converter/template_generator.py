@@ -39,7 +39,7 @@ def tokens_converter(file_data) -> dict:
 	# Italic Text Conversion
 	matches = re.findall(r"(\*([^*\n]+)\*)", file_data)
 	for italic in matches:
-		file_data = file_data.replace(italics[0], f"""<span style="font-style: italic;">{italics[1]}</span>""")
+		file_data = file_data.replace(italic[0], f"""<span style="font-style: italic;">{italic[1]}</span>""")
 
 	# Unordered Lists Conversion
 	matches = re.findall(r"(\* (.+))", file_data)
