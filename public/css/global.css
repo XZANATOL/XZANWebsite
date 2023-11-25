@@ -1,10 +1,30 @@
+:root {
+  --main-bg-color: #00303e;
+  --main-links-color: #11a511;
+  --main-title-color: #ffffff;
+  --main-text-color: #efefef;
+  --main-code-color: #e3c28f;
+}
+
 html,body{
+    width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     transition: 0.3s;
-    height: 100%;
 }
+h1,h2,h3,h4,h5,h6{
+    color: var(--main-title-color);
+}
+p,span,li,th,td{
+    color: var(--main-text-color);
+}
+a:is(*, :hover, :focus, :visited),
 hr{
-    color: #11a511;
+    color: var(--main-links-color);
+}
+/* Disabling Bootstrap Edits */
+code{
+    color: var(--main-code-color) !important;
 }
 
 
@@ -67,7 +87,7 @@ Theme Switcher
 Dark Theme
 //////////////////////// */
 .body-dark{
-    background-color: rgb(24, 29, 33);
+    background-color: var(--main-bg-color);
 }
 /* /////////////////////////
 Light Theme

@@ -1,0 +1,70 @@
+<style>
+    .navbar-align{
+        margin-bottom: 2.5em;
+        padding: 0.75rem 2rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        background: var(--main-bg-color);
+        width: 100%;
+        position: sticky;
+        top: 0;
+    }
+    .header-brand:is(*, :visited, :hover),
+    .header-brand > span{
+        color: var(--main-links-color);
+    }
+    .header-brand > img{
+        height: 40px;
+        margin-right: 8px;
+    }
+
+    .header-list{
+        margin-right: 0 !important;
+    }
+    .header-list > li{
+        margin: 0 0.5rem;
+    }
+    .header-list > li > a:is(*, :visited){
+        color: var(--main-links-color);
+        -webkit-text-stroke: 0.5px var(--main-links-color);
+        transition: 0.3s;
+    }
+    .header-list > li > a:hover{
+        color: var(--main-links-color);
+        -webkit-text-stroke: 0.5px #00a5d6;
+    }
+</style>
+
+<header class="navbar navbar-expand-md navbar-align">
+	<a class="navbar-brand header-brand" href="/" style="display: flex; align-items: center;">
+        <img src="/imgs/fav_icon.png">
+        <span>Abdelrahmn Walied</span>
+    </a>
+
+	<!-- Start Mobile Navbar Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span>
+        	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" fill="rgba(255,255,255,1)" class="bi bi-list" viewBox="0 0 14 16">
+				<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+			</svg>
+        </span>
+    </button>
+    <!-- End Mobile Navbar Button -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto header-list">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/brag_doc">Brag Doc</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/freelance">SysCraft</a>
+            </li>
+        </ul>
+    </div>
+</header>

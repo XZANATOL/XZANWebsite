@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%- include("../_includes/global_head.ejs") -%>
+	<title><%= meta.title %></title>
+</head>
+
+<body class="body-dark">
+	<%- include("../_includes/navbar.ejs") %>
+
+	<main class="container">
+		<h1 style="text-align: center;"><%= meta.title %></h1>
+		<p style="text-align: center;">Created: <%= meta.created %> | Updated: <%= meta.updated %></p>
+		<%- post %>
+	</main>
+</body>
+</html>

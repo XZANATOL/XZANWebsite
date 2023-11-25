@@ -1,56 +1,64 @@
 const fs = require("fs")
+const showdown = require("showdown")
 
 module.exports = function(server){
 
 	server.get("/blog", (request, response) => {
-		const dir = fs.readdirSync(`${__dirname}/../views/blog-articles/`)
+		const years = fs.readdirSync(`${__dirname}/../views/blog/articles`).sort().reverse()
+		const articles = years.map( year => {
+			const dir = fs.readdirSync(`${__dirname}/../views/blog/articles/${year}`)
+			return [year, dir]
+		})
+
 		const context = {
-			"categories": dir
+			articles: articles,
+			seo: {
+				"title": "XZANBlog",
+				"description": "DevLog for sharing my learning journey"
+			}
 		}
 		return response.render("blog/index.ejs", context)
 	})
 
-
-	server.get("/blog/:cat", (request, response) => {
-		let dir;
+	server.get("/blog/:year/:post_title", (request, response) => {
+		let post;
+		let meta;
 		try{
-			dir = fs.readdirSync(`${__dirname}/../views/blog-articles/${request.params.cat}`)
-		} catch{
-			dir = []
-		}
-		const context = {
-			"cat": request.params.cat,
-			"topics": dir
-		}
-		return response.render("blog/index_cat.ejs", context)
-	})
+			post = fs.readFileSync(
+					`${__dirname}/../views/blog/articles/${request.params.year}/${request.params.post_title}/post.md`, 
+					"utf-8"
+				)
+			meta = JSON.parse(
+					fs.readFileSync(
+						`${__dirname}/../views/blog/articles/${request.params.year}/${request.params.post_title}/meta.json`,
+						"utf-8"
+					)
+				)
 
-
-	server.get("/blog/:cat/:topic", (request, response) => {
-		let dir;
-		try{
-			dir = fs.readdirSync(`${__dirname}/../views/blog-articles/${request.params.cat}/${request.params.topic}`)
-		} catch{
-			dir = []
-		}
-		const context = {
-			"cat": request.params.cat,
-			"topic": request.params.topic,
-			"posts": dir
-		}
-		return response.render("blog/index_cat_topic.ejs", context)
-	})
-
-
-	server.get("/blog/:cat/:topic/:post", (request, response) => {
-		const check = fs.existsSync(`${__dirname}/../views/blog-articles/${request.params.cat}/${request.params.topic}/${request.params.post}.ejs`)
-		if(check){
-			return response.render(`blog-articles/${request.params.cat}/${request.params.topic}/${request.params.post}.ejs`,
-			{
-				"post": request.params.post
+			showdown.extension('linksInNewTab', () => {
+			  return [{
+			    type: 'html',
+			    regex: /(<a [^>]+?)(>.*<\/a>)/g,
+			    replace: '$1 target="_blank"$2'
+			  }];
+			});
+			let converter = new showdown.Converter({
+			  extensions: ['linksInNewTab']
 			})
+			converter.setOption('tables', true)
+
+			post = converter.makeHtml(post);
+		}catch(err){
+			post = []
+			meta = []
 		}
-		return response.render("404.ejs")
+
+		const context = {
+			post: post,
+			meta: meta,
+			seo: meta.seo
+		}
+		return response.render("blog/article.ejs", context)
 	})
 
 }

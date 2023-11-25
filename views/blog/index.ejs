@@ -3,32 +3,35 @@
 <head>
 	<%- include("../_includes/global_head.ejs") -%>
 	<title>Blog - XZANSite</title>
-	<link rel="stylesheet" href="/css/blog.css">
 </head>
 
 <body class="body-dark">
-	<header class="container">
-		<div class="box">
-			<h1>Blog - Home</h1>
-			<div class="theme">
-				<%- include("../theme_switch.ejs") %>
-			</div>
-		</div>
-	</header>
-
-	<br><br>
+	<%- include("../_includes/navbar.ejs") %>
 
 	<main class="container">
 		<div class="row gy-5">
-			<section class="col-12">
-				<h2>Categories _</h2>
-				<div class="row list" style="justify-content: center;">
-					<% for(cat of categories){ %>
-					<div class="col-6 list-record" style="text-align: center;">
-						<h4><a href="/blog/<%= cat %>"><%= cat %></a></h4>
-					</div>
-					<% } %>
+			<style>
+				.blog-list > h3{
+					margin-top: 0.5em;
+					margin-bottom: 1em;
+				}
+				.blog-list > div{
+					padding-left: 1rem;
+				}
+				.blog-list > div > a{
+					margin-bottom: 1em;
+				}	
+			</style>
+
+			<section class="col-12 blog-list">
+				<% for(article of articles){ %>
+				<h3><%= article[0] %></h3>
+				<% for(title of article[1]){ %>
+				<div style="display: flex; justify-content: space-between;">
+					<a href="/blog/<%= article[0] %>/<%= title %>"><%= title.replaceAll("_", " ") %></a>
 				</div>
+				<% } %>
+				<% } %>
 			</section>
 		</div>
 	</main>
