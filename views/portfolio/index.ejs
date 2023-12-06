@@ -8,39 +8,7 @@
 </head>
 
 <body class="body-dark">
-	<header class="navbar fixed-top navbar-expand-md">
-		<a class="navbar-brand" href="#">XZANATOL</a>
-
-		<!-- Start Mobile Navbar Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span>
-            	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" fill="rgba(255,255,255,1)" class="bi bi-list" viewBox="0 0 14 16">
-					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-				</svg>
-            </span>
-        </button>
-        <!-- End Mobile Navbar Button -->
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                <li class="nav-item active" id="sec1">
-                    <a class="nav-link" aria-current="page" href="#sec1-sec">Card</a>
-                </li>
-                <li class="nav-item" id="sec2">
-                  <a class="nav-link" href="#sec2-br">Resume</a>
-                </li>
-                <li class="nav-item" id="sec3">
-                  <a class="nav-link" href="#sec3-br">Projects</a>
-                </li>
-                <li class="d-sm-block d-md-none">
-                	<%- include("../theme_switch.ejs") %>
-                </li>
-            </ul>
-        </div>
-
-        <div class="d-none d-md-block">
-        	<%- include("../theme_switch.ejs") %>
-        </div>
-	</header>
+	<%- include("../_includes/navbar.ejs") %>
 
     <main class="container" id="sec1-sec">
         <section class="box">
@@ -115,13 +83,12 @@
 
         <br id="sec2-br"><br><br>
 
-        <section class="row" id="sec2-sec">
-            <h2 style="text-align: center;">Resume _</h2>
+        <section class="row row-stretch gy-3" id="sec2-sec">
             <p style="text-align: justify; text-align-last: center;">
                 <%= resume %>
             </p>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-lg-6">
                 <hr>
                 <h3>Work Experience</h3>
                 <div class="box">
@@ -145,7 +112,7 @@
                     <br>
                     <% } %>
 
-                    <div class="button-wrapper">
+                    <div class="modal-openner">
                         <button onclick="switch_popup('wE_id')" class="button-raw">Show more..!</button>
                     </div>
 
@@ -176,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-lg-6">
                 <hr>
                 <h3>Education</h3>
                 <div class="box">
@@ -190,7 +157,7 @@
                     </div>
                     <br>
 
-                    <% for (let eE=0; eE < 2; eE++){ %>
+                    <% for (let eE=0; eE < 3; eE++){ %>
                     <div class="box-xp">
                         <h5><%= educationExperience[eE].place %></h5>
                         <p>
@@ -206,7 +173,7 @@
                     <br>
                     <% } %>
 
-                    <div class="button-wrapper">
+                    <div class="modal-openner">
                         <button onclick="switch_popup('eE_id')" class="button-raw">Show more..!</button>
                     </div>
 
@@ -233,8 +200,8 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-md-6">
-                <hr>
+            <div class="col-xs-12 col-lg-6">
+                <hr style="padding: 0.5px;">
                 <h3>Volunteer</h3>
                 <div class="box box-fullHieght">
                     <% for (let v=0; v < volunteer.length; v++){ %>
@@ -258,8 +225,8 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-md-6">
-                <hr>
+            <div class="col-xs-12 col-lg-6">
+                <hr style="padding: 0.5px;">
                 <h3>Tech Stack</h3>
                 <div class="box box-fullHieght">
                     <div class="row">
@@ -319,19 +286,32 @@
         <section id="sec3-sec">
             <h2 style="text-align: center;">Projects _</h2>
 
-            <div class="row gx-3 gy-2 GH-wrapper">
-                <div class="col-xs-12 col-md-6">
-                    <ul class="GH-ul">
-                        <li>Listed projects can be found organized on <a href="https://github.com/XZANATOL/ProjectSpace" target="_blank">GitHub</a>.</li>
-                        <li>3D GitHub story made by <a href="https://skyline.github.com/xzanatol/2022" target="_blank">GitHub Skyline</a>.</li>
-                    </ul>
-                </div>
+            <div class="row gx-3 gy-2 GH-wrapper" style="flex-direction: row-reverse;">
+                <a href="https://github.com/XZANATOL" class="col-xs-12 col-md-6" target="_blank" title="GitHub Profile">
+                    <img class="GHPP" src="https://avatars.githubusercontent.com/u/64689436" loading="lazy">
+                    <p style="color: var(--main-links-color);">
+                        GitHub Profile _
+                    </p>
+                </a>
 
                 <div class="col-xs-12 col-md-6">
-                    <img class="GHSL" src="/imgs/portfolio/GHSL.png">
-                    <p style="text-align: justify; text-align-last: center;">
-                        2022 <a href="https://skyline.github.com" target="_blank">contributions</a> _
-                    </p>
+                    <ul class="GH-ul">
+                        <li>
+                            <span>Featured:</span>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/XZANATOL/XZerver" target="_blank">XZerver</a>: Self-hosted Multi-purpose server for side projects management. <br><a href="https://github.com/XZANATOL/XZerver/blob/master/docs/DD%20-%20XZerver.md" target="_blank">Design Document</a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/XZANATOL/DataChat" target="_blank">DataChat</a>: Self-Hosted chat app that groups features from Discord and WhatsApp for storing data in an organized manner. <br><a href="https://github.com/XZANATOL/DataChat#how-it-started" target="_blank">Design Document</a> / <a href="https://github.com/XZANATOL/DataChat#usage" target="_blank">Demo Video</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            More projects can be found at <a href="https://github.com/XZANATOL/ProjectSpace" target="_blank">ProjectSpace</a>.
+                        </li>
+                    </ul>
                 </div>
             </div>
                 
@@ -340,7 +320,7 @@
         <br><br><br>
 
         <section style="text-align: center;">
-            <p>Made with NodeJS & Updated on Dec 2022.</p>
+            <p>Made with NodeJS & Updated on Dec 2023.</p>
         </section>
     </main>
 </body>

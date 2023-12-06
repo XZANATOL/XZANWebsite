@@ -6,6 +6,6 @@ module.exports = (server, db) => {
 		delete(records.props.updated)
 		records = Object.values(records.props)
 
-		return response.render("freelance/index.ejs", {records: records})
+		return response.render("freelance/index.ejs", {records: records, seo: {}})
 	})
 }

@@ -21,23 +21,6 @@ document.addEventListener("click", (event) => {
     }
 })
 
-const sections = 3
-document.body.addEventListener("scroll", (event) => {
-    for(let i=1; i<=sections; i++){
-        let header = document.getElementById(`sec${i}`)
-        let section = document.getElementById(`sec${i}-sec`)
-        let sectionBoudings = section.getBoundingClientRect()
-
-        if (sectionBoudings.top < window.innerHeight && sectionBoudings.bottom >= 0) {
-            for(let j=1; j<=sections; j++){
-                let head = document.getElementById(`sec${j}`)
-                head.classList.remove("active")
-            }
-            header.classList.add("active")
-        }
-    }
-})
-
 async function copy_to_clip(text){
     await navigator.clipboard.writeText(text)
 }

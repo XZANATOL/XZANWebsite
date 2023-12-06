@@ -26,6 +26,9 @@ hr{
 code{
     color: var(--main-code-color) !important;
 }
+main{
+    margin-top: 7em;
+}
 
 
 .box{

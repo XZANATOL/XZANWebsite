@@ -10,7 +10,8 @@ module.exports = (server, db) => {
 		})
 
 		let context = {
-			"brags": brags
+			"brags": brags,
+			seo: {}
 		}
 		return response.render("brag_doc/index.ejs", context)
 	})
