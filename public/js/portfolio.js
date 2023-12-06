@@ -1,24 +1,22 @@
-let eE_id_old = false
-let wE_id_old = false
+let id_old = {
+    eE_id: false,
+    wE_id: false,
+    v_id: false
+}
 document.addEventListener("click", (event) => {
-    const eE_id = document.getElementById("eE_id")
-    const wE_id = document.getElementById("wE_id")
-    if (eE_id.classList.contains("show") && !eE_id.contains(event.target)){
-            if(!eE_id_old){
-                eE_id_old = true
+    const ids = ["eE_id", "wE_id", "v_id"]
+
+    ids.forEach( id => {
+        const ele = document.querySelector(`#${id}`)
+        if (ele.classList.contains("show") && !ele.contains(event.target)){
+            if(!id_old[id]){
+                id_old[id] = true
             }else{
-                eE_id.classList.toggle("show")
-                eE_id_old = false
+                ele.classList.toggle("show")
+                id_old[id] = false
             }
-    }
-    if (wE_id.classList.contains("show") && !wE_id.contains(event.target)){
-            if(!wE_id_old){
-                wE_id_old = true
-            }else{
-                wE_id.classList.toggle("show")
-                wE_id_old = false
-            }
-    }
+        }
+    })
 })
 
 async function copy_to_clip(text){

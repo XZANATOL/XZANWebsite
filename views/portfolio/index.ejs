@@ -204,7 +204,7 @@
                 <hr style="padding: 0.5px;">
                 <h3>Volunteer</h3>
                 <div class="box box-fullHieght">
-                    <% for (let v=0; v < volunteer.length; v++){ %>
+                    <% for (let v=0; v < 2; v++){ %>
                     <div class="box-xp">
                         <h5><%= volunteer[v].position %></h5>
                         <p>
@@ -221,7 +221,37 @@
                             <% }) %>
                         </ul>
                     </div>
+                    <br>
                     <% } %>
+
+                    <div class="modal-openner">
+                        <button onclick="switch_popup('v_id')" class="button-raw">Show more..!</button>
+                    </div>
+
+                    <div class="container box popup" id="v_id">
+                        <div class="button-wrapper">
+                            <button onclick="switch_popup('v_id')" class="button-raw">X</button>
+                        </div>
+                        <% for (let v=0; v < volunteer.length; v++){ %>
+                        <div class="box-xp">
+                            <h5><%= volunteer[v].position %></h5>
+                            <p>
+                                <span>
+                                    <a href="<%= volunteer[v].placeLink %>" target="_blank"><%= volunteer[v].place %></a>
+                                </span>
+                                <br>
+                                <span><%= volunteer[v].period %></span>
+                            </p>
+
+                            <ul>
+                                <% volunteer[v].bulletPoint.forEach( (bp) => { %>
+                                <li><%- bp %></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                        <br>
+                        <% } %>
+                    </div>
                 </div>
             </div>
 
