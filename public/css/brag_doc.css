@@ -1,26 +1,14 @@
-html, body{
-	height: 100%;
-}
-header{
-	margin-top: 35px;
-	text-align: center;
-	position: relative;
-}
-a:is(:hover, :visited, :focus, *){
-	text-decoration: underline;
-	color: #11a511;
-}
 select:hover{
 	cursor: pointer;
 }
 
-
 .mini-header{
+	margin-bottom: 2.5em;
 	width: 100%;
-	margin-top: 10px;
+}
+.mini-header > form{
 	display: flex;
 	justify-content: center;
-	position: relative;
 }
 .query > *{
 	height: 33px;
@@ -29,19 +17,8 @@ select:hover{
 	outline: none;
 	padding-right: 16px;
 	margin-right: 8px;
-}
-.theme{
-	position: absolute;
-	right: 0;
-	display: flex;
-}
-@media screen and (max-width: 768px){
-	.theme{
-		position: inherit;
-		width: 100%;
-		margin-top: 8px;
-		justify-content: right;
-	}
+	background: var(--main-input-bg-color);
+	color: var(--main-text-color);
 }
 
 .loader-wrapper{
@@ -55,7 +32,7 @@ select:hover{
 }
 .loader{
 	border: 16px solid rgba(255, 255, 255, 0.75);
-	border-top: 16px solid #11a511;
+	border-top: 16px solid var(--main-links-color);
 	border-radius: 50%;
 	width: 120px;
 	height: 120px;
@@ -71,46 +48,4 @@ main > div > section > .box{
 }
 main > div > section > .box:hover{
 	transform: scale(1.02);	
-}
-
-/* /////////////////////////
-Dark Theme
-//////////////////////// */
-.body-dark > header > div >  h1,
-.body-dark > main > div > section > h2,
-.body-dark > main > div > section > div > h3{
-	color: white;
-	transition: 0.3s;
-}
-.body-dark > header > div > span,
-.body-dark > header > div > div > .query > *,
-.body-dark > main > div > section > div > p,
-.body-dark > main > div > section > div > ul > li{
-	color: rgba(255, 255, 255, 0.75) !important;
-	transition: 0.3s;
-}
-.body-dark > header > div > div > .query > *{
-	background: rgba(40, 47, 50, 0.6);
-}
-
-
-/* /////////////////////////
-Light Theme
-//////////////////////// */
-.body-light > header > div >  h1,
-.body-light > header > div >  span,
-.body-light > main > div > section > h2,
-.body-light > header > div > div > .query > *,
-.body-light > main > div > section > div > h3,
-.body-light > main > div > section > div > p,
-.body-light > main > div > section > div > ul{
-	color: black !important;
-	transition: 0.3s;
-}
-.body-light > header > div > div > .query > *{
-	background: rgba(211, 211, 209, 0.6);
-}
-.body-light > main > .loader-wrapper > .loader{
-	border: 16px solid #49654E;
-	border-top: 16px solid #11a511;
 }

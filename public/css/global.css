@@ -4,6 +4,7 @@
   --main-title-color: #ffffff;
   --main-text-color: #efefef;
   --main-code-color: #e3c28f;
+  --main-input-bg-color: rgba(40, 47, 50, 0.6);
 }
 
 html,body{

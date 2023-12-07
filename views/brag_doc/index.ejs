@@ -8,36 +8,24 @@
 </head>
 
 <body class="body-dark">
-	<header class="container">
-		<div class="box">
-			<h1>Brag Document</h1>
-			<div class="mini-header">
-				<form class="query" method="post" onchange="bragGrabber(this)">
-					<select name="year" onchange="monthUpdater(this)">
-						<option value="">Select Year</option>
-						<% brags.forEach((brag) => { %>
-							<option value="<%= brag %>"><%= brag %></option>
-						<% }) %>
-						
-					</select>
-
-					<select name="month" id="month">
-						<option value="">Select Month</option>
-					</select>
-				</form>
-				<div class="theme d-none d-md-flex">
-					<%- include("../theme_switch.ejs") %>
-				</div>
-			</div>
-			<div class="theme d-sm-flex d-md-none">
-				<%- include("../theme_switch.ejs") %>
-			</div>
-		</div>
-	</header>
-
-	<br><br>
+	<%- include("../_includes/navbar.ejs") %>
 
 	<main class="container">
+		<div class="box mini-header">
+			<form class="query" method="post" onchange="bragGrabber(this)">
+				<select name="year" onchange="monthUpdater(this)">
+					<option value="">Select Year</option>
+					<% brags.forEach((brag) => { %>
+						<option value="<%= brag %>"><%= brag %></option>
+					<% }) %>
+					
+				</select>
+
+				<select name="month" id="month">
+					<option value="">Select Month</option>
+				</select>
+			</form>
+		</div>
 		<div class="col-12 loader-wrapper d-none"><div class="loader"></div></div>
 		<div class="row gy-4" id="docs">
 		</div>
