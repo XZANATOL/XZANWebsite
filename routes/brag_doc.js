@@ -11,7 +11,10 @@ module.exports = (server, db) => {
 
 		let context = {
 			"brags": brags,
-			seo: {}
+			seo: {
+				"title": "Brag Document",
+				"description": "Tracking my achievments month by month."
+			}
 		}
 		return response.render("brag_doc/index.ejs", context)
 	})

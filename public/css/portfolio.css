@@ -27,12 +27,6 @@ hr{
 	position: relative;
 }
 
-.pp-card > div{
-	text-align: center;
-}
-.pp-pic{
-	border-radius: 50%;
-}
 .row-stretch{
 	align-items: stretch;
 }

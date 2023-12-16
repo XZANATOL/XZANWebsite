@@ -12,6 +12,7 @@ html,body{
     min-height: 100vh;
     overflow-x: hidden;
     transition: 0.3s;
+    background-color: var(--main-bg-color);
 }
 h1,h2,h3,h4,h5,h6{
     color: var(--main-title-color);
@@ -30,72 +31,10 @@ code{
 main{
     margin-top: 7em;
 }
-
+/* Disabling Bootstrap Edits */
 
 .box{
     box-shadow:-10px 5px 30px rgb(0 0 0 / 50%);
     border-radius:15px;
     padding: 30px;
-}
-
-/* /////////////////////////
-Theme Switcher
-//////////////////////// */
-.switch{
-    width: 72px;
-    height: 33px;
-    position: relative;
-    display: block !important;
-    background-color: #49654E;
-    border-radius: 25px;
-    box-shadow: inset -10px 5px 30px rgb(0 0 0 / 25%);
-}
-.checkbox{
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.toggle-thumb{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 40px;
-    cursor: pointer;
-    width: 70px;
-}
-.toggle-thumb::before {
-    content: "";
-    width: 32px;
-    height: 30px;
-    position: absolute;
-    right: 1px;
-    bottom: 1px;
-    border-radius: 50%;
-    background-color: #128e12;
-    transition: .4s all ease;
-}
-.checkbox:checked + .toggle-thumb:before {
-    transform: translateX(-34px);
-}
-/* /////////////////////////
-Theme Switcher
-//////////////////////// */
-
-
-/* /////////////////////////
-Dark Theme
-//////////////////////// */
-.body-dark{
-    background-color: var(--main-bg-color);
-}
-/* /////////////////////////
-Light Theme
-//////////////////////// */
-.body-light{
-    background-color: #efeee9;
 }

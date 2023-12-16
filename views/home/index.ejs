@@ -4,63 +4,131 @@
 	<%- include("../_includes/global_head.ejs") -%>
 	<title>Home - XZANSite</title>
 	<link rel="stylesheet" href="/css/home.css">
+    <script src="/js/home.js" defer></script>
 </head>
 
-<body class="body-dark">
-	<div class="theme-switcher">
-		<%- include("../theme_switch.ejs") %>
-	</div>
+<body>
+	<main class="container">
+		
+		<section class="box">
+            <div class="row pp-card">
+                <div class="col-xs-12 col-lg-4">
+                    <img class="img-fluid pp-pic" src="/imgs/portfolio/pp.png" alt="Profile Picture" title="Profile Picture" />
+                </div>
+                
+                <div class="col-xs-12 col-lg-8">
+                        <br class="d-sm-block d-md-none">
+                        <h1>Abdelrahman Walied _</h1>
+                        <p>BackEnd/DevOps Engineer | Communications Engineer | IT Specialist | TIEC Ambassador</p>
+                        <!-- Social Media Icons -->
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/xzanatol" target="_blank">
+                            <button title="LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" style="margin-bottom:3px;">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                                    </svg>
+                                    <span>LinkedIn</span>
+                            </button>
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://www.github.com/XZANATOL" target="_blank">
+                            <button title="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" style="margin-bottom:1px;">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                    </svg>
+                                    <span>GitHub</span>
+                            </button>
+                        </a>
+                        <!-- G-Mail -->
+                        <button title="Google Mail: Click to copy to clipboard" onclick="copy_to_clip('abdelrahmanbedox@gmail.com')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" style="margin-bottom:1px;">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                                </svg>
+                                <span>G-Mail</span>
+                        </button>
+                        <!-- Discord -->
+                        <button title="Discord ID: Click to copy to clipboard" onclick="copy_to_clip(this.innerText)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16" style="margin-bottom:1px;">
+                                    <path d="M6.552 6.712c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888.008-.488-.36-.888-.816-.888zm2.92 0c-.456 0-.816.4-.816.888s.368.888.816.888c.456 0 .816-.4.816-.888s-.36-.888-.816-.888z"/>
+                                    <path d="M13.36 0H2.64C1.736 0 1 .736 1 1.648v10.816c0 .912.736 1.648 1.64 1.648h9.072l-.424-1.48 1.024.952.968.896L15 16V1.648C15 .736 14.264 0 13.36 0zm-3.088 10.448s-.288-.344-.528-.648c1.048-.296 1.448-.952 1.448-.952-.328.216-.64.368-.92.472-.4.168-.784.28-1.16.344a5.604 5.604 0 0 1-2.072-.008 6.716 6.716 0 0 1-1.176-.344 4.688 4.688 0 0 1-.584-.272c-.024-.016-.048-.024-.072-.04-.016-.008-.024-.016-.032-.024-.144-.08-.224-.136-.224-.136s.384.64 1.4.944c-.24.304-.536.664-.536.664-1.768-.056-2.44-1.216-2.44-1.216 0-2.576 1.152-4.664 1.152-4.664 1.152-.864 2.248-.84 2.248-.84l.08.096c-1.44.416-2.104 1.048-2.104 1.048s.176-.096.472-.232c.856-.376 1.536-.48 1.816-.504.048-.008.088-.016.136-.016a6.521 6.521 0 0 1 4.024.752s-.632-.6-1.992-1.016l.112-.128s1.096-.024 2.248.84c0 0 1.152 2.088 1.152 4.664 0 0-.68 1.16-2.448 1.216z"/>
+                                </svg>
+                                <span>XZANATOL#1411</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-	<div class="row gx-5 gy-4">
-		<section class="col-12 col-md-6">
-			<a href="/portfolio">
-				<div class="box">
-					<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-file-person-fill" viewBox="0 0 16 16">
-						<path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
-					</svg>
-					<hr>
-					<h1>Personal Portfolio</h1>
-				</div>
-			</a>
-		</section>
+            <div class="row pp-secondHalf">
+                <div class="col-12">
+                    <br>
+                    <h2>Greetings! _</h2>
+                    <p>I'm a junior software engineer with 2 years of professional experience building my career in back-end & DevOps. I’m more into data communication between clients and servers, and comparing between different methodologies that offer solutions for a problem while keeping a keen eye on efficiency, performance, client side operations optimization. Currently, I'm seeking opportunities to up-skill my expertise & knowledge, and contribute to the software development industry</p>
+                    <a href="https://drive.google.com/drive/folders/1ptOZvg4sYkfQAx0Nn4J_HkaxNKLEFdTk?usp=sharing" target="_blank">
+                        <button class="button-cv">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16" style="margin-bottom:4px;">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                            </svg>
+                            <span>Download CV</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-		<section class="col-12 col-md-6">
-			<a href="/blog">
-				<div class="box">
-					<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-pencil-square" viewBox="0 0 16 16">
-						<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-					  	<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-					</svg>
-					<hr>
-					<h1>Blog</h1>
-				</div>
-			</a>
-		</section>
 
-		<section class="col-12 col-md-6">
-			<a href="/brag_doc">
-				<div class="box">
-					<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-					 	<path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
-					 	<path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-					</svg>
-					<hr>
-					<h1>Brag Document</h1>
-				</div>
-			</a>
-		</section>
 
-		<section class="col-12 col-md-6">
-			<a href="/freelance">
-				<div class="box">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-						<path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
-					</svg>
-					<hr>
-					<h1>Freelance Portfolio</h1>
-				</div>
-			</a>
-		</section>
-	</div>
+		<div class="row gx-4 gy-4 pages">
+			<section class="col-6 col-lg-3">
+				<a href="/portfolio">
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+							<path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+						</svg>
+						<hr>
+						<h3>Portfolio</h3>
+					</div>
+				</a>
+			</section>
+
+			<section class="col-6 col-lg-3">
+				<a href="/blog">
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-pencil-square" viewBox="0 0 16 16">
+							<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+						  	<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+						</svg>
+						<hr>
+						<h3>Blog</h3>
+					</div>
+				</a>
+			</section>
+
+			<section class="col-6 col-lg-3">
+				<a href="/brag_doc">
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+						 	<path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+						 	<path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+						</svg>
+						<hr>
+						<h3>Brag Document</h3>
+					</div>
+				</a>
+			</section>
+
+			<section class="col-6 col-lg-3">
+				<a href="/freelance">
+					<div class="box">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+							<path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+						</svg>
+						<hr>
+						<h3>SysCraft</h3>
+					</div>
+				</a>
+			</section>
+		</div>
+	</main>
 </body>
 </html>

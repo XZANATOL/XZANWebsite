@@ -1,9 +1,6 @@
-body{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: auto;
+main{
+	margin-top: 0;
+	padding: 2em;
 }
 a:is(*, :hover, :visited, :focus){
 	text-decoration: none;
@@ -12,29 +9,50 @@ hr{
 	height: 2px !important;
 	opacity: 0.8;
 }
-
-
-.theme-switcher{
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 1;
+svg{
+	fill: rgb(255 255 255 / 90%);
 }
 
-.row{
-	width: 100%;
-	justify-content: center;
-	padding-top: 4.2rem;
-	padding-bottom: 4.2rem;
-}
-.box{
+.pp-card > div{
 	text-align: center;
-	color: #11a511;
-	transition-property: transform;
+}
+.pp-pic{
+	border-radius: 26px;
+	height: 170px;
+}
+.pp-secondHalf{
+	text-align: justify;
+}
+.button-cv{
+	width: 100%;
+	margin: 0;
+}
+
+button{
+	background: transparent;
+	border-radius: 15px;
+	border-color: var(--main-links-color);
+	color: var(--main-links-color);
+	padding: 5px;
+	margin: 5px;
 	transition: 0.3s;
 }
-.box:hover, .box:active{
-	transform: scale(1.05);
+button:hover{
+	background: #02556f;
+}
+
+
+.row{
+	justify-content: center;
+	align-items: stretch;
+}
+
+.box{
+	text-align: center;
+	color: var(--main-links-color);
+	transition-property: transform;
+	height: 100%;
+	transition: 0.3s;
 }
 .box > section{
 	width: 100%;
@@ -44,26 +62,9 @@ hr{
 	margin-bottom: 15px;
 }
 
-
-/* /////////////////////////
-Dark Theme
-//////////////////////// */
-.body-dark > div > section > a > .box{
-    background-color:#4a4a4a26;
+.pages{
+	margin-top: 0.5em;
 }
-.body-dark > div > section > a > .box > svg{
-	fill: rgb(255 255 255 / 90%);
-	transition: 0.3s;
-}
-
-
-/* /////////////////////////
-Light Theme
-//////////////////////// */
-.body-light > div > section > a > .box{
-    background-color: rgba(255, 255, 255, 0.15);
-}
-.body-light > div > section > a > .box > svg{
-	fill: #606060;
-	transition: 0.3s;
+.pages > section > a > .box:hover{
+	transform: scale(1.03);
 }
