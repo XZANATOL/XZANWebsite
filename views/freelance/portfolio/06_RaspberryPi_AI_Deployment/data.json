@@ -1,0 +1,5 @@
+{
+	"description": "Deployed AI models on Raspberry Pi and Integrated the models with the existing sensors for real-time analysis.",
+	"tech": ["Raspberry Pi", "OpenCV", "PiCamera", "SIM800L"],
+	"links": []
+}

@@ -21,6 +21,7 @@ server.use(express.urlencoded({
 
 
 server.use(express.static("public"))
+server.use("/freelance_static", express.static("views/freelance/portfolio"))
 
 
 require("./routes/home")(server)

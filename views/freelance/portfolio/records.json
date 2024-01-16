@@ -1,0 +1,37 @@
+[
+	{
+		"title": "Raspberry Pi AI Deployment",
+		"folder": "06_RaspberryPi_AI_Deployment",
+		"doa": "Jan 13 2024"
+	},
+
+	{
+		"title": "Travele",
+		"folder": "05_Travele",
+		"doa": "Sep 31 2023"
+	},
+
+	{
+		"title": "SedrahCare App",
+		"folder": "04_SedrahCare",
+		"doa": "Sep 30 2023"
+	},
+
+	{
+		"title": "IT Support",
+		"folder": "03_IT_Support",
+		"doa": "Jun 15 2023"
+	},
+
+	{
+		"title": "Chrome Telegram Extension",
+		"folder": "02_Telegram_Automation",
+		"doa": "Apr 05 2023"
+	},
+	
+	{
+		"title": "GTech Billing Desktop App",
+		"folder": "01_GTech_Biller",
+		"doa": "Mar 25 2023"
+	}
+]

@@ -1,0 +1,5 @@
+{
+	"description": "Chrome extension that automates a frequent Telegram workflow taking place every 2 hours.",
+	"tech": ["Chrome Manifest V3"],
+	"links": []
+}

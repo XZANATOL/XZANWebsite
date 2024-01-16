@@ -1,0 +1,5 @@
+{
+	"description": "A desktop billing application for generating financial invoices equipped with an interface for managing and tracking records per company.",
+	"tech": ["ElectronJS", "AngularJS", "PDFKit", "SQLite3"],
+	"links": []
+}

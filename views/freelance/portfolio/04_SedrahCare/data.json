@@ -1,0 +1,10 @@
+{
+	"description": "Built a medical web app similar to Vezeta for a SA company called SDC. The application features an online booking system with GPS utilization for a better user experience, a video conferencing system with rooms for doctors to meet with patients, and an online store for ordering medicines. All managed through a customized admin panel with a security system for detecting fake accounts.",
+	"tech": ["Django", "NameCheap", "Agora", "WebRTC", "Stripe", "OTP Authentication", "Geodecoding"],
+	"links": [
+		[
+			"https://www.linkedin.com/in/mahmoudragabelsayed",
+			"Colleague: Mahmoud Ragab"
+		]
+	]
+}

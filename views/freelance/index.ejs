@@ -2,43 +2,66 @@
 <html>
 <head>
 	<%- include("../_includes/global_head.ejs") -%>
-	<title>Freelance Portfolio - XZANSite</title>
-	<link rel="stylesheet" href="/css/freelance.css">
+	<title>SysCraft</title>
+	<link rel="stylesheet" type="text/css" href="/css/freelance.css">
 	<script src="/js/freelance.js" defer></script>
 </head>
 
-<body>
-	
-	<header>
-		<p>
-			As a Software Engineer, I have extensive experience in developing and implementing small-medium software solutions for a wide range of industries. My experience includes designing and developing web & desktop apps, and automation scripts. I am also proficient in database management, and API development.
-			<br><br>
-			With a strong background in computer science and multiple projects listed on GitHub, I'm confident in my ability to contribute into your project and meet the required needs.
-		</p>
-	</header>
+<body class="container">
+	<section class="banner row gy-3">
+		<div class="col-sm-12 col-lg-5">
+			<img src="/imgs/SysCraft_logo.svg">
+		</div>
 
-	<main class="row gx-5 gy-4">
-		<% records.forEach((record, index) => { %>
-		<section class="col-12 col-md-4">
-			<div class="box" data-bs-toggle="modal" data-bs-target="#project<%= index %>">
-				<img src="/imgs/freelance/<%= record.title %>.png" lazy>
-				<h4><%= record.title %> | <%= record.date %></h4>
-				<p><%= record.description %></p>
+		<div class="col-sm-12 col-lg-7">
+			<div class="box">
+				<h1>SysCraft</h1>
+				<p>Freelance entity tailored in different tech solutions that utilize application, web development & embedded systems.</p>
+				<button href="#" class="Btn">
+					Contacts
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="portfolio">
+		<h2 class="title-work">Our Work</h2>
+		<div class="row g-3" id="work-container">
+			
+			<div class="col-sm-12 col-lg-4">
+				<div id="workCarousel" class="carousel slide carousel-fade" data-bs-ride="false" data-bs-interval="false">
+					<div class="carousel-inner" id="record-display">
+					    <div class="carousel-item active" id="temp_item">
+					    </div>
+					  	<button class="carousel-control-prev" type="button" data-bs-target="#workCarousel" data-bs-slide="prev">
+					    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					    	<span class="visually-hidden">Previous</span>
+					  	</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#workCarousel" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+					<div class="load_more_wrapper">
+						<button class="Btn">
+							Load More..
+						</button>
+					</div>
+				</div>
 			</div>
 
-			<div class="modal fade" id="project<%= index %>" tabindex="-1" aria-hidden="true">
-				<div class="modal-dialog">
-			  		<div class="modal-content">
-			      		<div class="modal-header">
-			        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			      		</div>
-			      		<div class="modal-body">
-			        		<img src="/imgs/freelance/<%= record.title %>.png" lazy>
-			      		</div>
-			    	</div>
-			  	</div>
+			<div class="col-sm-12 col-lg-8" id="record-extend">
+				<div class="box work-wrapper record-extend-c">
+					<h2></h2>
+					<p></p>
+					<span id="workTechS"></span>
+					<ul id="workTech"></ul>
+					<span id="workLnksS"></span>
+					<ul id="workLnks"></ul>
+				</div>
 			</div>
-		</section>
-		<% }) %>
-	</main>
+
+		</div>
+	</section>
 </body>
+</html>
