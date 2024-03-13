@@ -23,7 +23,8 @@ server.use(helmet({
 	contentSecurityPolicy: {
 		directives: {
 			"script-src": ["'self'", "'unsafe-inline'"],
-			"script-src-attr": ["'self'", "'unsafe-inline'"]
+			"script-src-attr": ["'self'", "'unsafe-inline'"],
+			"img-src": ["*"]
 		}
 	}
 }))
