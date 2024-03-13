@@ -5,6 +5,7 @@ const port = 3000
 const bodyParser = require("body-parser")
 const express = require("express")
 const server = express()
+const helmet = require("helmet")
 
 const CyclicDb = require("cyclic-dynamodb")
 const db = CyclicDb(process.env.AWS_TABLE_NAME)
@@ -17,6 +18,9 @@ server.set("views", "./views/")
 server.use(express.json())
 server.use(express.urlencoded({
 	extended: true
+}))
+server.use(helmet({
+	contentSecurityPolicy: false
 }))
 
 
