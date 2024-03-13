@@ -20,7 +20,12 @@ server.use(express.urlencoded({
 	extended: true
 }))
 server.use(helmet({
-	contentSecurityPolicy: false
+	contentSecurityPolicy: {
+		directives: {
+			"script-src": ["'self'", "'unsafe-inline'"],
+			"script-src-attr": ["'self'", "'unsafe-inline'"]
+		}
+	}
 }))
 
 
