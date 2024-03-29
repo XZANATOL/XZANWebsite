@@ -1,11 +1,16 @@
-module.exports = function(server){
+module.exports = function(server, db){
 
-	server.get("/", (request, response) => {
+	server.get("/", async (request, response) => {
+		const data = await db.collection("portfolio").get("data")
+		const context = {
+			"headline": data.props.headline,
+			"greetings": data.props.greetings,
+		}
 		const seo = {
 			"title": "Abdelrahman Walied - XZANATOL",
 			"description": "Personal Portfolio"
 		}
-		return response.render("home/index.ejs", {seo: seo})
+		return response.render("home/index.ejs", {context: context, seo: seo})
 	})
 
 }

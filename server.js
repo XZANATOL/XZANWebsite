@@ -34,7 +34,7 @@ server.use(express.static("public"))
 server.use("/freelance_static", express.static("views/freelance/portfolio"))
 
 
-require("./routes/home")(server)
+require("./routes/home")(server, db)
 require("./routes/redirects")(server, db)
 require("./routes/portfolio")(server, db)
 require("./routes/blog")(server)
